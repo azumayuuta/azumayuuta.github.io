@@ -464,9 +464,9 @@ a.ddmenu::before {
 .large-screen .pc {display: block;}
 
 /*強調文字*/
-.color-primary {color: var(--primary-color);}
-.color-light {color: var(--light-color);}
-.color-accent {color: var(--accent-color);}
+.color-primary {color: var(--primary-color); font-weight: bold;}
+.color-light {color: var(--light-color); font-weight: bold;}
+.color-accent {color: var(--accent-color); font-weight: bold;}
 
 
 /*メイン画像
