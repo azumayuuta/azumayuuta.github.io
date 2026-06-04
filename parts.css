@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/* ================================================================
+   以下、Builder で選択したパーツのCSS（自動連結）
+   ================================================================ */
+
+/* ---- ウェーブアニメーション背景（bg-wave1-animation） (bg-wave1-animation) ---- */
+/*波のアニメーション
+---------------------------------------------------------------------------*/
+.text-parts > *:first-child {margin-top: 0;}
+
+/*波を囲む全体のブロック*/
+.bg-wave1-animation-parts {
+	--wave-bg-color: transparent;	/*背景色（波＆テキスト背景）*/
+	--wave-text-color: inherit;		/*文字色*/
+	--wave-height: 80px;			/*波の高さ。お好みで。*/
+	--wave-speed: 10s;				/*波の速度。お好みで。*/
+	position: relative;
+	padding: calc(var(--wave-height) - 1px) 0;
+}
+
+/*色バリエーション（bg）*/
+.bg-wave1-animation-parts.bg-wave1-bg-parts {
+	--wave-bg-color: var(--bg-inverse-color);	/*テキスト背景。theme.cssのbg-inverse-colorを読み込みます。*/
+	--wave-text-color: var(--bg-color);			/*文字色。theme.cssのbg-colorを読み込みます。*/
+}
+/*色バリエーション（primary）*/
+.bg-wave1-animation-parts.bg-wave1-primary-parts {
+	--wave-bg-color: var(--primary-color);	/*テキスト背景。theme.cssのprimary-colorを読み込みます。*/
+	--wave-text-color: var(--primary-inverse-color);	/*文字色。theme.cssのprimary-inverse-colorを読み込みます。*/
+}
+/*色バリエーション（light）*/
+.bg-wave1-animation-parts.bg-wave1-light-parts {
+	--wave-bg-color: var(--light-color);	/*テキスト背景。theme.cssのlight-colorを読み込みます。*/
+	--wave-text-color: var(--light-inverse-color);	/*文字色。theme.cssのlight-inverse-colorを読み込みます。*/
+}
+/*色バリエーション（accent）*/
+.bg-wave1-animation-parts.bg-wave1-accent-parts {
+	--wave-bg-color: var(--accent-color);	/*テキスト背景。theme.cssのaccent-colorを読み込みます。*/
+	--wave-text-color: var(--accent-inverse-color);	/*文字色。theme.cssのaccent-inverse-colorを読み込みます。*/
+}
+
+/*テキストを入れるブロック*/
+.bg-wave1-animation-parts .text-parts {
+	padding: var(--content-space-s) var(--content-space-l);
+	background: var(--wave-bg-color);
+	color: var(--wave-text-color);
+}
+
+/*波の色*/
+.bg-wave1-animation-parts .wave-wrap-parts use {
+	fill: var(--wave-bg-color);
+}
+
+/*上下の波（共通）*/
+.bg-wave1-animation-parts .wave1-parts {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: var(--wave-height);
+}
+.bg-wave1-animation-parts .wave1-parts svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.bg-wave1-animation-parts .wave1-parts .wave-wrap-parts {
+	transform-box: fill-box;
+	transform-origin: 0 0;
+	animation: move-wave var(--wave-speed) linear infinite;
+}
+
+@keyframes move-wave {
+0% { transform: translateX(0); }
+100%   { transform: translateX(-50%); }
+}
+
+/*上の波*/
+.bg-wave1-animation-parts .wave1-top-parts {
+	top: 0;
+}
+/*下の波*/
+.bg-wave1-animation-parts .wave1-bottom-parts {
+	bottom: 0;
+	transform: rotate(180deg);
+}
