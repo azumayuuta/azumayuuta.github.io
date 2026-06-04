@@ -454,6 +454,7 @@ a.ddmenu::before {
 .dn {display: none !important;}
 .block {display: block !important;}
 .is-clip {overflow: hidden;}
+.center {text-align:center;}
 
 /*大きな画面の場合*/
 .large-screen .ws {width: 50%;}
