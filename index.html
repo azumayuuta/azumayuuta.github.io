@@ -63,10 +63,10 @@
 
 <!--このフレームで使用しているカラーセット。（css/theme.cssで一括置き換えできます-->
 <p>
-<span style="color: var(--bg-inverse-color);font-size: 2rem;">●</span>
 <span style="color: var(--primary-color);font-size: 2rem;">●</span>
 <span style="color: var(--light-color);font-size: 2rem;">●</span>
 <span style="color: var(--accent-color);font-size: 2rem;">●</span>
+<span style="color: var(--bg-inverse-color);font-size: 2rem;">●</span>
 </p>
 
 <!--
@@ -103,43 +103,7 @@
 <path id="wavePath" d="M0 30 V15 Q30 3 60 15 T120 15 V30z" />
 </defs>
 </svg>
-
-
-<section class="bg-wave1-animation-parts bg-wave1-bg-parts">
-
-<!--上の波-->
-<div class="wave1-parts wave1-top-parts">
-<svg viewBox="0 0 120 28" preserveAspectRatio="none">
-<g class="wave-wrap-parts">
-<use href="#wavePath" x="0"   y="0" />
-<use href="#wavePath" x="120" y="0" />
-</g>
-</svg>
-</div>
-
-<div class="text-parts">
-
-<h2>ここにテキストを入力</h2>
-
-<!-- 上と下の波はそれぞれdivで独立しているので、片一方だけ使用する事もできます。<br>
-波のアニメーション速度はcssの--wave-speed: 10s;の10sを変更して下さい。現状10秒です。<br>
-波の高さは--wave-height: 80px;の80pxの数字で変更できます。-->
-
-</div>
-<!--/.text-parts-->
-
-<!--下の波-->
-<div class="wave1-parts wave1-bottom-parts">
-<svg viewBox="0 0 120 28" preserveAspectRatio="none">
-<g class="wave-wrap-parts">
-<use href="#wavePath" x="0"   y="0" />
-<use href="#wavePath" x="120" y="0" />
-</g>
-</svg>
-</div>
-
-</section>
-
+	
 
 <section class="bg-wave1-animation-parts bg-wave1-primary-parts">
 
@@ -235,6 +199,43 @@
 </div>
 
 </section>
+
+	
+<section class="bg-wave1-animation-parts bg-wave1-bg-parts">
+
+<!--上の波-->
+<div class="wave1-parts wave1-top-parts">
+<svg viewBox="0 0 120 28" preserveAspectRatio="none">
+<g class="wave-wrap-parts">
+<use href="#wavePath" x="0"   y="0" />
+<use href="#wavePath" x="120" y="0" />
+</g>
+</svg>
+</div>
+
+<div class="text-parts">
+
+<h2>ここにテキストを入力</h2>
+
+<!-- 上と下の波はそれぞれdivで独立しているので、片一方だけ使用する事もできます。<br>
+波のアニメーション速度はcssの--wave-speed: 10s;の10sを変更して下さい。現状10秒です。<br>
+波の高さは--wave-height: 80px;の80pxの数字で変更できます。-->
+
+</div>
+<!--/.text-parts-->
+
+<!--下の波-->
+<div class="wave1-parts wave1-bottom-parts">
+<svg viewBox="0 0 120 28" preserveAspectRatio="none">
+<g class="wave-wrap-parts">
+<use href="#wavePath" x="0"   y="0" />
+<use href="#wavePath" x="120" y="0" />
+</g>
+</svg>
+</div>
+
+</section>
+	
 <!-- ▲ bg-wave1-animation -->
 </main>
 
