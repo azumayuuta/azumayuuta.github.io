@@ -463,6 +463,11 @@ a.ddmenu::before {
 .large-screen .sh {display: none;}
 .large-screen .pc {display: block;}
 
+/*強調文字*/
+.color-primary {color: var(--primary-color);}
+.color-light {color: var(--light-color);}
+.color-accent {color: var(--accent-color);}
+
 
 /*メイン画像
 ---------------------------------------------------------------------------*/
