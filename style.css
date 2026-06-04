@@ -337,7 +337,7 @@ a.ddmenu::before {
 }
 .pr a::before {
 	font-family: "Font Awesome 6 Free";
-	content: "\e2ca";
+	content: "&#169";
 	font-weight: 900;
 	margin-right: 0.5em;
 }
