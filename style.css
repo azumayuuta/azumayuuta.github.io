@@ -365,6 +365,11 @@ a.ddmenu::before {
 	border-radius: 50%;	/*円形にする*/
 }
 
+.pagetop:hover {
+	filter: brightness(0.8);	/*少しだけ暗くする*/
+	text-decoration: none;
+}
+
 
 /*bg1-parts
 ---------------------------------------------------------------------------*/
