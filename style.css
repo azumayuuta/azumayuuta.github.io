@@ -329,18 +329,21 @@ a.ddmenu::before {
 ---------------------------------------------------------------------------*/
 .pr a {
 	text-decoration: none;display: block;
-	background: #333;
-	color: #fff;
+	background: #fff;
+	color: #333;
 	text-align: center;
 	padding: 0.5rem 1rem;
 	font-size: 0.8rem;
 }
+
+/*
 .pr a::before {
 	font-family: "Font Awesome 6 Free";
-	content: "&#169";
+	content: "";
 	font-weight: 900;
 	margin-right: 0.5em;
 }
+*/
 
 
 /*PAGE TOP（↑）設定
