@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>AzumaYuta Kobe.U</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="神戸大学 人間発達環境学研究科 東 優汰 のホームページです">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="home">
+
+<div id="container">
+
+<header>
+
+<h1 id="logo"><a href="index.html">AzumaYuta Kobe.U</a></h1>
+
+<!--開閉メニュー-->
+<div id="menubar">
+
+<nav>
+<ul>
+<li><a href="#" disabled="disabled">MENU</a>
+	<ul>
+	<li><a href="profile.html">PROFILE</a></li>
+	<li><a href="publications.html">PUBLICATIONS</a></li>
+	<li><a href="other_works.html">OTHER WORKS</a></li>
+	<li><a href="links.html">LINKS</a></li>
+	</ul>
+</li>
+<li><a href="about.html">ABOUT</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+</ul>
+</nav>
+
+<!--
+	<div class="sh">小さな端末でのみ表示させたい情報があれば、ここに記入して下さい。</div>
+-->
+	
+</div>
+<!--/#menubar-->
+
+</header>
+
+<!--メイン画像-->
+<div class="mainimg">
+
+<div class="slide img1">
+<picture><source media="(max-width: 800px)" srcset="mainimg1.jpg"><img src="mainimg1.jpg" alt=""></picture>
+</div>
+
+</div>
+<!--/.mainimg-->
+
+<div id="contents">
+
+<main>
+
+<section>
+
+<!--frame12-biz1（2026.4公開）-->
+
+<!--このフレームで使用しているカラーセット。（css/theme.cssで一括置き換えできます-->
+<p>
+<span style="color: var(--primary-color);font-size: 2rem;">●</span>
+<span style="color: var(--light-color);font-size: 2rem;">●</span>
+<span style="color: var(--accent-color);font-size: 2rem;">●</span>
+<span style="color: var(--bg-inverse-color);font-size: 2rem;">●</span>
+</p>
+
+<!--
+<h3>利用規約</h3>
+<ul>
+<li>このテンプレートは、<a href="https://template-party.com/">Template Party</a>にて無料配布している<a href="https://template-party.com/parts/">パーツ</a>です。必ずダウンロード先のサイトの<a href="https://template-party.com/read.html">利用規約</a>をご一読の上でご利用下さい。</li>
+<li>最下部の著作表示『Web Design:Template-Party』は無断で削除しないで下さい。わざと見えなく加工する事も禁止です。下部の著作を外したい場合は<a href="https://template-party.com/">Template-Party</a>の<a href="https://template-party.com/member.html">ライセンス契約</a>を行う事でHP下部の著作を外す事ができます。</li>
+</ul>
+
+<h3>メイン画像について</h3>
+<ul>
+<li>メイン画像を入れ替えたい場合は、弊社素材サイト<a href="https://haconana.com/">haconana</a>をご活用下さい。</li>
+<li>画面幅800px以下の端末向けに小さな画像を使いたい場合は、htmlのsrcsetで指定されている画像ファイル名を準備したものに書き換えて下さい。デフォルトでは大きな端末用と同じファイルが指定されています。mediaの値はcssのメディアクエリと同じなので、例えば縦長端末用などの指定もできます。</li>
+</ul>
+
+<h3>メニューについて</h3>
+<ul>
+<li>画面幅900px未満で開閉メニューになります。ここのブレイクポイントは、main.jsの「const breakPoint = 900;」で変更が可能です。</li>
+</ul>
+-->
+
+<section>
+
+<h2>Other Works</h2>
+<p>研究関連</p>
+<ul>
+  <li>ここにテキストを入力</li>
+</ul>
+
+</section>
+<section>
+  
+<p>研究以外の活動</p>
+<ul>
+  <li>ここにテキストを入力</li>
+</ul>
+
+</section>
+
+</main>
+
+</div>
+<!--/#contents-->
+
+<!--以下の行はテンプレートの著作。削除しないで下さい。-->
+<span class="pr"><a href="">《© Azuma, Y. 2026》</a></span>
+
+<!--メニューオーバーレイ（メニュー外クリックで閉じる用）-->
+<div id="menubar-overlay"></div>
+
+</div>
+<!--/#container-->
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+<!--開閉ボタン（ハンバーガーアイコン）-->
+<div id="menubar_hdr">
+<span></span><span></span><span></span>
+</div>
+
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--パララックス（inview）-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<script src="jquery.inview_set.js"></script>
+
+<!--このテンプレート専用のスクリプト-->
+<script src="main.js"></script>
+<script src="parts.js"></script>
+
+</body>
+</html>
