@@ -215,8 +215,8 @@ header {
 	width: 50%;	/*画面の半分の幅*/
 	height: 100%;
 	padding: 100px var(--content-space-l) 50px;	/*上下に100px、左右にtheme.cssのcontent-space-lで指定しているサイズ、下に50pxの余白*/
-	background: var(--primary-color);	/*背景色。theme.cssのprimary-colorを読み込みます。*/
-	color: var(--primary-inverse-color);	/*文字色。theme.cssのprimary-inverse-colorを読み込みます。*/
+	background: var(--bg-inverse-color);	/*背景色。theme.cssのprimary-colorを読み込みます。*/
+	color: var(--bg-color);	/*文字色。theme.cssのprimary-inverse-colorを読み込みます。*/
 }
 
 .small-screen #menubar {display: none;}
