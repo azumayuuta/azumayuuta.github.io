@@ -333,7 +333,7 @@ a.ddmenu::before {
 	color: #333;
 	text-align: center;
 	padding: 0.5rem 1rem;
-	font-size: 1.2rem;
+	font-size: 1.0rem;
 }
 
 /*
@@ -366,7 +366,7 @@ a.ddmenu::before {
 }
 
 .pagetop:hover {
-	filter: brightness(0.8);	/*少しだけ暗くする*/
+	filter: brightness(1.1);	/*少しだけ明るくする*/
 	text-decoration: none;
 }
 
