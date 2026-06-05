@@ -149,8 +149,8 @@ f_2 \simeq f_2(x_1^*,x_2^*) +  \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X
 <p>とりあえず二次以降の項は無視します。含めると面倒くさいからです。</p>
 <p>それから零次の項ですが (こんな言い方するのか？) 今考えているのは固定点での近似ですから，当然のように\[f_1(x_1^*,x_2^*),f_2(x_1^*,x_2^*)=0\]です。結局，</p>
 \begin{eqnarray}
-f_1(x_1,x_2) \approx \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) \\
-f_2(x_1,x_2) \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2)
+f_1 \approx \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) \\
+f_2 \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2)
 \end{eqnarray}
 <p>ということですね。大雑把ですが，実用上この近似で十分なことが多いようです。</p>
 <h4>&lt;行列で表示する&gt;</h4>
@@ -209,8 +209,8 @@ f_2(x_1,x_2) \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta 
   \end{pmatrix}
 \end{eqnarray}
 <p>となります。これで固定点近傍の状態点 (の固定点からの距離) の時間発展を近似することができました。三次元以上の系でも同じような形になるのは，まあ容易に想像できますよね。</p>
-<p>ちなみに，右辺にある正方行列のような，偏微分係数を集めた行列をヤコビ行列と言います。ヤコビさんが考えたんですかね，よく知りません。</p>
-<p>このような近似を得て何がうれしいかというと <br> (1) この形の方程式の一般解は既知である (初期値が与えられれば解析的に解ける) <br> (2) ヤコビ行列の固有値を求めるだけで固定点の安定性を判別できる <br> の主に二点ですね。</p>
+<p>ちなみに，右辺にある正方行列のような，偏微分係数を集めた行列をヤコビ行列と言います。ヤコビさんが考えたんですかね。よく知りません。</p>
+<p>上のような近似を得て何がうれしいかというと <br> (1) この形の方程式の一般解は既知である (初期値が与えられれば解析的に解ける) <br> (2) 式中のヤコビ行列の固有値を求めるだけで固定点の安定性を判別できる <br> の主に二点ですね。</p>
 </section>
 <section>	
 <p>さて，MathJaxを使って数式を書いてみました。初めてでしたが案外いけましたね。ただやっぱり慣れは必要そうです。LaTeXの文法とほぼ同じらしいので，練習していきたいですね。</p>
