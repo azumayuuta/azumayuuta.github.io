@@ -6,8 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="神戸大学 人間発達環境学研究科 東 優汰 のホームページです">
 <link rel="stylesheet" href="../style.css">
-<link rel="icon" href="icon.jpg">
-
+<link rel="icon" href="../icon.jpg">
+<!--▼MathJax-->
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
@@ -134,16 +134,16 @@
 \begin{eqnarray}
   \left\{
     \begin{array}{l}
-      \frac{d (x_1^*+\delta x_1)}{d t}=f_1(x_1,x_2) \\
-      \frac{d (x_2^*+\delta x_2)}{d t}=f_2(x_1,x_2) \\
+      \frac{d (x_1^*+\delta x_1)}{d t}=f_1 \\
+      \frac{d (x_2^*+\delta x_2)}{d t}=f_2 \\
     \end{array}
   \right.
 \end{eqnarray}
 <p>ですね。</p>
 <p>ここで，右辺をテイラー展開してみます。\(X\)は固定点近傍の点なので，固定点での近似をそのまま使ってしまいましょう。</p>
 \begin{eqnarray}
-f_1(x_1,x_2) \simeq f_1(x_1^*,x_2^*) +  \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) + \ldots \\
-f_2(x_1,x_2) \simeq f_2(x_1^*,x_2^*) +  \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) + \ldots
+f_1 \simeq f_1(x_1^*,x_2^*) +  \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) + \ldots \\
+f_2 \simeq f_2(x_1^*,x_2^*) +  \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) + \ldots
 \end{eqnarray}
 <p>とりあえず二次以降の項は無視します。含めると面倒くさいからです。</p>
 <p>それから零次の項ですが (こんな言い方するのか？) 今考えているのは固定点での近似ですから，当然のように\[f_1(x_1^*,x_2^*),f_2(x_1^*,x_2^*)=0\]です。結局，</p>
@@ -191,7 +191,8 @@ f_2(x_1,x_2) \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta 
 \end{eqnarray}
 <p>\(x_1^*\)および\(x_2^*\)は定数なので，</p>
 \begin{eqnarray}
- \begin{pmatrix}
+  \frac{d}{d t}
+  \begin{pmatrix}
    \delta x_1 \\
    \delta x_2
   \end{pmatrix}
