@@ -104,16 +104,16 @@
 <section>
 
 <p>そもそも力学系 (dynamical systems) とは，時間発展する系全般を指す非常に広い概念です。</p>
-<p>ただ，ふつう力学系というときには<span class="color_accent">有限個の常微分方程式の組でその時間発展を記述できるような系</span>を指すことが多いんではないかと思います。</p>
+<p>ただ，ふつう力学系というときには<span class="color-accent">有限個の常微分方程式の組でその時間発展を記述できるような系</span>を指すことが多いんではないかと思います。</p>
 <p>つまり，系の状態変数\(x_n\)を使って</p>
 \begin{eqnarray}
   \left\{
-    \begin{array}{l}
-      \frac{d x_1}{d t}=f_1(x_1,x_2, \ldots ,x_n) \\
-      \frac{d x_2}{d t}=f_2(x_1,x_2, \ldots ,x_n) \\
-      \vdots \\
-      \frac{d x_n}{d t}=f_n(x_1,x_2, \ldots ,x_n)
-    \end{array}
+    \begin{eqnarray}
+      \frac{d x_1}{d t}&=&f_1(x_1,x_2, \ldots ,x_n) \\
+      \frac{d x_2}{d t}&=&f_2(x_1,x_2, \ldots ,x_n) \\
+      &\vdots& \\
+      \frac{d x_n}{d t}&=&f_n(x_1,x_2, \ldots ,x_n)
+    \end{eqnarray}
   \right.
 \end{eqnarray}
 <p>と表せるような系です。ここで\(n\) (状態変数の個数) はその力学系の次元と呼ばれます。</p>
@@ -125,14 +125,87 @@
 <p>まず，興味の系は</p>
 \begin{eqnarray}
   \left\{
+    \begin{eqnarray}
+      \frac{d x_1}{d t}&=&f_1(x_1,x_2) \\
+      \frac{d x_2}{d t}&=&f_2(x_1,x_2) \\
+	\end{eqnarray}
+  \right.
+\end{eqnarray}
+\end{eqnarray}
+<p>と表せます。この系の固定点を\(\mathbb{X}=(x_1^*,x_2^*)\)と置きましょう。すると固定点近傍の点は\(X=(x_1^*+\deltax_1,x_2^*+\deltax_2)\)と表せます。</p>
+<p>この\(X\)の挙動は</p>	
+\begin{eqnarray}
+  \left\{
     \begin{array}{l}
-      \frac{d x_1}{d t}=f_1(x_1,x_2) \\
-      \frac{d x_2}{d t}=f_2(x_1,x_2) \\
+      \frac{d x_1^*+\deltax_1}{d t}=f_1(x_1,x_2) \\
+      \frac{d x_2^*+\deltax_2}{d t}=f_2(x_1,x_2) \\
     \end{array}
   \right.
 \end{eqnarray}
-<p>と表せます。</p>
-	
+<p>ですね。</p>
+<p>ここで，右辺をテイラー展開してみます。\(X\)は固定点近傍の点なので，固定点まわりの近似をそのまま使ってしまいましょう。</p>
+\begin{eqnarray}
+f_1(x_1,x_2) \simeq f_1(x_1^*,x_2^*) +  \frac{\partial f_1}{partial x_1}\bigg|_\mathbb{X} (\deltax_1) + \frac{\partial f_1}{partial x_2}\bigg|_\mathbb{X} (\deltax_2) + \ldots \\
+f_2(x_1,x_2) \simeq f_2(x_1^*,x_2^*) +  \frac{\partial f_2}{partial x_1}\bigg|_\mathbb{X} (\deltax_1) + \frac{\partial f_2}{partial x_2}\bigg|_\mathbb{X} (\deltax_2) + \ldots
+\end{eqnarray}
+<p>とりあえず二次以降の項は無視します。含めると面倒くさいからです。</p>
+<p>それから零次の項ですが (こんな言い方するのか？) 今考えているのは固定点ですから，当然のように\(f_1(x_1^*,x_2^*),f_2(x_1^*,x_2^*)=0\)です。</p>	
+<p>結局，</p>
+\begin{eqnarray}
+f_1(x_1,x_2) \approx \frac{\partial f_1}{partial x_1}\bigg|_\mathbb{X} (\deltax_1) + \frac{\partial f_1}{partial x_2}\bigg|_\mathbb{X} (\deltax_2) \\
+f_2(x_1,x_2) \approx \frac{\partial f_2}{partial x_1}\bigg|_\mathbb{X} (\deltax_1) + \frac{\partial f_2}{partial x_2}\bigg|_\mathbb{X} (\deltax_2)
+\end{eqnarray}
+<p>ということですね。大雑把ですが，実用上この近似で十分なことが多いようです。</p>
+<p>さてあとは何も難しくありません。上の近似を系の連立微分方程式に代入して，行列表示に直すだけです。</p>
+\begin{eqnarray}
+  \left\{
+    \begin{array}{l}
+      \frac{d x_1^*+\deltax_1}{d t}=f_1(x_1,x_2) \\
+      \frac{d x_2^*+\deltax_2}{d t}=f_2(x_1,x_2) \\
+    \end{array}
+  \right. \\
+  \Rightarrow 
+  \begin{eqnarray}
+    \frac{d x_1^*+\deltax_1}{d t} \approx \frac{\partial f_1}{partial x_1}\bigg|_\mathbb{X} (\deltax_1) + \frac{\partial f_1}{partial x_2}\bigg|_\mathbb{X} (\deltax_2) \\
+    \frac{d x_2^*+\deltax_2}{d t} \approx \frac{\partial f_2}{partial x_1}\bigg|_\mathbb{X} (\deltax_1) + \frac{\partial f_2}{partial x_2}\bigg|_\mathbb{X} (\deltax_2)
+  \end{eqnarray} \\
+  \Rightarrow
+  \fac{d}{d t}
+  \begin{pmatrix}
+   x_1^*+\deltax_1 \\
+   x_2^*+\deltax_2
+  \end{pmatrix}
+  \approx
+  \begin{pmatrix}
+   \frac{\partial f_1}{partial x_1}\bigg|_\mathbb{X} & \frac{\partial f_1}{partial x_2}\bigg|_\mathbb{X} \\
+   \frac{\partial f_2}{partial x_1}\bigg|_\mathbb{X} & \frac{\partial f_2}{partial x_2}\bigg|_\mathbb{X}
+  \end{pmatrix}
+  \begin{pmatrix}
+   \deltax_1 \\
+   \deltax_2
+  \end{pmatrix}
+\end{eqnarray}
+<p>\(x_1^*\)および\(x_2^*\)は定数なので，</p>
+begin{eqnarray}
+ \begin{pmatrix}
+   x_1^*+\deltax_1 \\
+   x_2^*+\deltax_2
+  \end{pmatrix}
+  \approx
+  \begin{pmatrix}
+   \frac{\partial f_1}{partial x_1}\bigg|_\mathbb{X} & \frac{\partial f_1}{partial x_2}\bigg|_\mathbb{X} \\
+   \frac{\partial f_2}{partial x_1}\bigg|_\mathbb{X} & \frac{\partial f_2}{partial x_2}\bigg|_\mathbb{X}
+  \end{pmatrix}
+  \begin{pmatrix}
+   \deltax_1 \\
+   \deltax_2
+  \end{pmatrix}
+\end{eqnarray}
+<p>となります。これで固定点近傍の状態点 (の固定点からの距離) の時間発展を近似することができました。三次元以上の系でも同じような形になるのは，まあ容易に想像できますよね。</p>
+<p>(ちなみに，右辺にある正方行列のような，偏微分係数を集めた行列をヤコビ行列と言います。ヤコビさんが考えたんですかね，よく知りません。)</p>
+<p>このような近似を得て何がうれしいかというと (1) この形の方程式の一般解は既知である (初期値が与えられれば解析的に解ける) (2) ヤコビ行列の固有値を求めるだけで固定点の安定性を判別できる の二点が主ですね。</p>
+<p>さて，MathJaxを使って数式を書いてみました。初めて (LaTeXとかも使ったことない) でしたが案外いけましたね。ただやっぱり慣れは必要そうです。</p>
+<p>今日はこの辺で。また次の記事で会いましょう。</p>
 </section>
 
 </main>
