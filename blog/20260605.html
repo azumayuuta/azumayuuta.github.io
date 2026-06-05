@@ -98,7 +98,7 @@
 </section>
 <section>
 <p>このブログ欄には何を書こうかなということなんですが，近況とか，勉強したこととか，与太話とかを共有する場にしようと思っています。</p>
-<p>今日はこれ以上特に書くこともないので，一般力学系の固定点まわりでの線形近似がヤコビ行列を使って表せることとか適当に示してみましょうか。</p>
+<p>今日はほかに書くこともないので，一般力学系の固定点まわりでの線形近似がヤコビ行列を使って表せることとか適当に示してみましょうか。</p>
 <p>(MathJaxっていう数式表示パッケージを試しに使ってみたいので...)</p>
 </section>
 <section>
@@ -108,45 +108,42 @@
 <p>つまり，系の状態変数\(x_n\)を使って</p>
 \begin{eqnarray}
   \left\{
-    \begin{eqnarray}
+    \begin{array}
       \frac{d x_1}{d t}&=&f_1(x_1,x_2, \ldots ,x_n) \\
       \frac{d x_2}{d t}&=&f_2(x_1,x_2, \ldots ,x_n) \\
       &\vdots& \\
       \frac{d x_n}{d t}&=&f_n(x_1,x_2, \ldots ,x_n)
-    \end{eqnarray}
+    \end{array}
   \right.
 \end{eqnarray}
-<p>と表せるような系です。ここで\(n\) (状態変数の個数) はその力学系の次元と呼ばれます。</p>
-<p>(系の挙動を\(n\)次元空間上の点の運動として表せるからです。このような空間は状態空間 (state space) または相空間 (phase space) と呼ばれます。)</p>
-<p>さて，関数\(f_n\)がすべて線形なら話は簡単なのですが，なかなかそうはいきません。</p>
-<p>そこで，興味のある点近傍で関数を線形近似して，系の大雑把な挙動を掴むといったことがよく行われます。</p>
+<p>と表せるような系です。ここで\(n\) (状態変数の個数) はその力学系の次元と呼ばれます。(系の挙動を\(n\)次元空間上の点の運動として表せるからです。このような空間は状態空間 (state space) または相空間 (phase space) と呼ばれます。)</p>
+<p>さて，関数\(f_n\)がすべて線形なら話は簡単なのですが，なかなかそうはいきません。そこで，興味のある点近傍で関数を線形近似して，系の大雑把な挙動を掴むといったことがよく行われます。</p>
 <p>たいてい興味の対象は固定点まわりの挙動です。固定点まわりのことが分かればいろんなことが分かります。</p>
 <p>今回は二次元の力学系を固定点まわりで近似してみましょう。<p>
 <p>まず，興味の系は</p>
 \begin{eqnarray}
   \left\{
-    \begin{eqnarray}
+    \begin{array}
       \frac{d x_1}{d t}&=&f_1(x_1,x_2) \\
       \frac{d x_2}{d t}&=&f_2(x_1,x_2) \\
-	\end{eqnarray}
+	\end{array}
   \right.
 \end{eqnarray}
-\end{eqnarray}
-<p>と表せます。この系の固定点を\(\mathbb{X}=(x_1^*,x_2^*)\)と置きましょう。すると固定点近傍の点は\(X=(x_1^*+\deltax_1,x_2^*+\deltax_2)\)と表せます。</p>
+<p>と表せます。この系の固定点を\(\mathbb{X}=(x_1^*,x_2^*)\)と置きましょう。すると固定点近傍の点は\(X=(x_1^*+\delta x_1,x_2^*+\delta x_2)\)と表せます。</p>
 <p>この\(X\)の挙動は</p>	
 \begin{eqnarray}
   \left\{
     \begin{array}{l}
-      \frac{d x_1^*+\deltax_1}{d t}=f_1(x_1,x_2) \\
-      \frac{d x_2^*+\deltax_2}{d t}=f_2(x_1,x_2) \\
+      \frac{d x_1^*+\delta x_1}{d t}=f_1(x_1,x_2) \\
+      \frac{d x_2^*+\delta x_2}{d t}=f_2(x_1,x_2) \\
     \end{array}
   \right.
 \end{eqnarray}
 <p>ですね。</p>
 <p>ここで，右辺をテイラー展開してみます。\(X\)は固定点近傍の点なので，固定点まわりの近似をそのまま使ってしまいましょう。</p>
 \begin{eqnarray}
-f_1(x_1,x_2) \simeq f_1(x_1^*,x_2^*) +  \frac{\partial f_1}{partial x_1}\bigg|_\mathbb{X} (\deltax_1) + \frac{\partial f_1}{partial x_2}\bigg|_\mathbb{X} (\deltax_2) + \ldots \\
-f_2(x_1,x_2) \simeq f_2(x_1^*,x_2^*) +  \frac{\partial f_2}{partial x_1}\bigg|_\mathbb{X} (\deltax_1) + \frac{\partial f_2}{partial x_2}\bigg|_\mathbb{X} (\deltax_2) + \ldots
+f_1(x_1,x_2) \simeq f_1(x_1^*,x_2^*) +  \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) + \ldots \\
+f_2(x_1,x_2) \simeq f_2(x_1^*,x_2^*) +  \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) + \ldots
 \end{eqnarray}
 <p>とりあえず二次以降の項は無視します。含めると面倒くさいからです。</p>
 <p>それから零次の項ですが (こんな言い方するのか？) 今考えているのは固定点ですから，当然のように\(f_1(x_1^*,x_2^*),f_2(x_1^*,x_2^*)=0\)です。</p>	
