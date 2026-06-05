@@ -146,8 +146,7 @@ f_1(x_1,x_2) \simeq f_1(x_1^*,x_2^*) +  \frac{\partial f_1}{\partial x_1}\bigg|_
 f_2(x_1,x_2) \simeq f_2(x_1^*,x_2^*) +  \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) + \ldots
 \end{eqnarray}
 <p>とりあえず二次以降の項は無視します。含めると面倒くさいからです。</p>
-<p>それから零次の項ですが (こんな言い方するのか？) 今考えているのは固定点での近似ですから，当然のように\[f_1(x_1^*,x_2^*),f_2(x_1^*,x_2^*)=0\]です。</p>	
-<p>結局，</p>
+<p>それから零次の項ですが (こんな言い方するのか？) 今考えているのは固定点での近似ですから，当然のように\[f_1(x_1^*,x_2^*),f_2(x_1^*,x_2^*)=0\]です。結局，</p>
 \begin{eqnarray}
 f_1(x_1,x_2) \approx \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) \\
 f_2(x_1,x_2) \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2)
@@ -162,12 +161,14 @@ f_2(x_1,x_2) \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta 
     \end{array}
   \right. \\
   \Rightarrow 
-  \begin{array}{l}
-    \frac{d (x_1^*+\delta x_1)}{d t} \approx \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\deltax_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\deltax_2) \\
-    \frac{d (x_2^*+\delta x_2)}{d t} \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\deltax_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\deltax_2)
-  \end{array} \\
+  \left\{
+	\begin{array}{l}
+      \frac{d (x_1^*+\delta x_1)}{d t} \approx \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) \\
+      \frac{d (x_2^*+\delta x_2)}{d t} \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2)
+    \end{array}
+  \right. \\
   \Rightarrow
-  \fac{d}{d t}
+  \frac{d}{d t}
   \begin{pmatrix}
    x_1^*+\delta x_1 \\
    x_2^*+\delta x_2
