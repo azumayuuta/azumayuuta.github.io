@@ -129,7 +129,7 @@
 	\end{array}
   \right.
 \end{eqnarray}
-<p>と表せます。この系の固定点を\(\mathbbX=(x_1^*,x_2^*)\)と置きましょう。すると固定点近傍の点は\(X=(x_1^*+\delta x_1,x_2^*+\delta x_2)\)と表せます。</p>
+<p>と表せます。この系の固定点を\(\mathbb{X}=(x_1^*,x_2^*)\)と置きましょう。すると固定点近傍の点は\(X=(x_1^*+\delta x_1,x_2^*+\delta x_2)\)と表せます。</p>
 <p>この\(X\)の挙動は</p>	
 \begin{eqnarray}
   \left\{
@@ -154,21 +154,27 @@ f_2(x_1,x_2) \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta 
 <p>ということですね。大雑把ですが，実用上この近似で十分なことが多いようです。</p>
 <p>さてあとは何も難しくありません。上の近似を系の連立微分方程式に代入して，行列表示に直すだけです。</p>
 \begin{eqnarray}
-  &\left\{
+  \left\{
     \begin{array}{l}
       \frac{d (x_1^*+\delta x_1)}{d t}=f_1(x_1,x_2) \\
       \frac{d (x_2^*+\delta x_2)}{d t}=f_2(x_1,x_2) \\
     \end{array}
-  \right. \\
+  \right.
+\end{eqnarray}
+	
+\begin{eqnarray}
   \Rightarrow 
-  &\left\{
+  \left\{
 	\begin{array}{l}
       \frac{d (x_1^*+\delta x_1)}{d t} \approx \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) \\
       \frac{d (x_2^*+\delta x_2)}{d t} \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2)
     \end{array}
-  \right. \\
+  \right.
+\end{eqnarray}
+	
+\begin{eqnarray}
   \Rightarrow
-  &\frac{d}{d t}
+  \frac{d}{d t}
   \begin{pmatrix}
    x_1^*+\delta x_1 \\
    x_2^*+\delta x_2
