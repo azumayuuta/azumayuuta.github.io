@@ -102,30 +102,31 @@
 <p>(MathJaxっていう数式表示パッケージを試しに使ってみたいので...)</p>
 </section>
 <section>
-
+<h3>力学系とは</h3>
 <p>そもそも力学系 (dynamical systems) とは，時間発展する系全般を指す非常に広い概念です。</p>
 <p>ただ，ふつう力学系というときには<span class="color-accent">有限個の常微分方程式の組でその時間発展を記述できるような系</span>を指すことが多いんではないかと思います。</p>
 <p>つまり，系の状態変数\(x_n\)を使って</p>
 \begin{eqnarray}
   \left\{
     \begin{array}{}
-      &\frac{d x_1}{d t}&=f_1(x_1,x_2, \ldots ,x_n) \\
-      &\frac{d x_2}{d t}&=f_2(x_1,x_2, \ldots ,x_n) \\
+      &\displaystyle \frac{d x_1}{d t}&=f_1(x_1,x_2, \ldots ,x_n) \\
+      &\displaystyle \frac{d x_2}{d t}&=f_2(x_1,x_2, \ldots ,x_n) \\
       &\vdots& \\
-      &\frac{d x_n}{d t}&=f_n(x_1,x_2, \ldots ,x_n)
+      &\displaystyle \frac{d x_n}{d t}&=f_n(x_1,x_2, \ldots ,x_n)
     \end{array}
   \right.
 \end{eqnarray}
 <p>と表せるような系です。ここで\(n\) (状態変数の個数) はその力学系の次元と呼ばれます。(系の挙動を\(n\)次元空間上の点の運動として表せるからです。このような空間は状態空間 (state space) または相空間 (phase space) と呼ばれます。)</p>
 <p>さて，関数\(f_n\)がすべて線形なら話は簡単なのですが，なかなかそうはいきません。そこで，興味のある点近傍で関数を線形近似して，系の大雑把な挙動を掴むといったことがよく行われます。</p>
-<p>たいてい興味の対象は固定点まわりの挙動です。固定点まわりのことが分かればいろんなことが分かります。</p>
+<p>たいてい興味の対象は固定点まわりの挙動です。固定点というのはすべての\(f_n\)がゼロを返すような点です。固定点まわりのことが分かればいろんなことが分かります。</p>
 <p>今回は二次元の力学系を固定点まわりで近似してみましょう。<p>
+<h3>固定点近傍での線形近似 (二次元系)</h3>
 <p>まず，興味の系は</p>
 \begin{eqnarray}
   \left\{
     \begin{array}{}
-      \frac{d x_1}{d t}&=&f_1(x_1,x_2) \\
-      \frac{d x_2}{d t}&=&f_2(x_1,x_2) \\
+      \displaystyle \frac{d x_1}{d t}&=&f_1(x_1,x_2) \\
+      \displaystyle \frac{d x_2}{d t}&=&f_2(x_1,x_2) \\
 	\end{array}
   \right.
 \end{eqnarray}
@@ -134,8 +135,8 @@
 \begin{eqnarray}
   \left\{
     \begin{array}{l}
-      \frac{d (x_1^*+\delta x_1)}{d t}=f_1 \\
-      \frac{d (x_2^*+\delta x_2)}{d t}=f_2 \\
+      \displaystyle \frac{d (x_1^*+\delta x_1)}{d t}=f_1 \\
+      \displaystyle \frac{d (x_2^*+\delta x_2)}{d t}=f_2 \\
     \end{array}
   \right.
 \end{eqnarray}
@@ -156,8 +157,8 @@ f_2(x_1,x_2) \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta 
 \begin{eqnarray}
   \left\{
     \begin{array}{l}
-      \frac{d (x_1^*+\delta x_1)}{d t}=f_1(x_1,x_2) \\
-      \frac{d (x_2^*+\delta x_2)}{d t}=f_2(x_1,x_2) \\
+      \displaystyle \frac{d (x_1^*+\delta x_1)}{d t}=f_1(x_1,x_2) \\
+      \displaystyle \frac{d (x_2^*+\delta x_2)}{d t}=f_2(x_1,x_2) \\
     \end{array}
   \right.
 \end{eqnarray}
@@ -166,8 +167,8 @@ f_2(x_1,x_2) \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta 
   \Rightarrow 
   \left\{
 	\begin{array}{l}
-      \frac{d (x_1^*+\delta x_1)}{d t} \approx \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) \\
-      \frac{d (x_2^*+\delta x_2)}{d t} \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2)
+      \displaystyle \frac{d (x_1^*+\delta x_1)}{d t} \approx \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) \\
+      \displaystyle \frac{d (x_2^*+\delta x_2)}{d t} \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2)
     \end{array}
   \right.
 \end{eqnarray}
