@@ -153,10 +153,31 @@
  &=& \lim_{h \to 0} \frac{f(x+h) g(x+h) - f(x+f) g(x) + f(x+h) g(x) - f(x) g(x)}{h} \\
  &=& \lim_{h \to 0} \frac{f(x+h) (g(x+h) -  g(x)) + g(x) (f(x+h) - f(x))}{h} \\
  &=& \lim_{h \to 0} \frac{f(x+h) (g(x+h) -  g(x))}{h} + \lim_{h \to 0} \frac{g(x) (f(x+h) - f(x))}{h} \\
- &=& f(x+h) \cdot \lim_{h \to 0} \frac{g(x+h) -  g(x)}{h} + g(x) \cdot \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} \\
+ &=& \lim_{h \to 0} f(x+h) \cdot \frac{g(x+h) -  g(x)}{h} + \lim_{h \to 0} g(x) \cdot \frac{f(x+h) - f(x)}{h} \\
  &=& f(x) \frac{d g(x)}{d x} + g(x) \frac{d f(x)}{d x}   
 \end{eqnarray}
-<p>「誰が思いつくねん」第二弾です。黙って暗記しましょう。</p>
+<p>「誰が思いつくねん」第二弾です。黙って暗記しましょう。ちなみにこの公式にはLeibniz ruleとかいうカッコいい名前がついています。</p>
+</section>
+<section>
+<h4>3. 関数の商の微分</h4>
+<p>この形はあまり見かけませんが，次に出てくるべき関数の微分公式を導出するために必要なので，証明しておきます。</p>
+\begin{eqnarray}
+    \displaystyle ( \frac{f(x)}{g(x)} )' = \frac{f' g - g' f}{g^2}   
+\end{eqnarray}
+<p>いきなりニュートン式の記法になったのは，ライプニッツ式で書くと恐ろしく煩雑だからです。</p>
+<p>証明は，微分の定義より，</p>
+\begin{eqnarray}
+ \displaystyle ( \frac{f(x)}{g(x)} )' &=&  \lim_{h \to 0} \frac{f(x+h)/g(x+h) - f(x)/g(x)}{h} \\
+ &=& \lim_{h \to 0} \frac{f(x+h)/g(x+h) - f(x)/g(x)}{h} \frac{g(x)g(x+h)}{g(x)g(x+h)}\\
+ &=& \lim_{h \to 0} \frac{f(x+h) g(x) - f(x) g(x+h)}{h} \frac{1}{g(x)g(x+h)}\\
+ &=& \lim_{h \to 0} \frac{f(x+h) g(x) - f(x)g(x) + f(x)g(x) - f(x) g(x+h)}{h} \frac{1}{g(x)g(x+h)}\\
+ &=& \lim_{h \to 0} \frac{ \{ f(x+h)-f(x) \} g(x) + \{ g(x+h)-g(x) \} f(x)}{h} \frac{1}{g(x)g(x+h)}\\
+\end{eqnarray}
+<p>\(h \to 0\)の極限を考えると</p>
+\begin{eqnarray}
+    = \displaystyle (f(x)' g(x) - g(x)' f(x)) \frac{1}{g(x)^2}   
+\end{eqnarray}
+<p>となり公式を満たせました。誰が思いｔ</p>
 </section>
 <section>
 <h4>4. べき関数の微分</h4>
@@ -164,15 +185,15 @@
 \begin{eqnarray}
     \displaystyle \frac{d x^a}{d x} = a x^{a-1}  
 \end{eqnarray}
-<p>証明してみましょう。数学的帰納法とかいうやつを使ってみます。</p>	
+<p>証明してみましょう。数学的帰納法とかいうやつを使ってみます。</p>
+<p>まず，ある\(a\)について上の公式が成り立つと仮定します。その時，</p>
 \begin{eqnarray}
-  \Rightarrow 
-  \left\{
-	\begin{array}{l}
-      \displaystyle \frac{d (x_1^*+\delta x_1)}{d t} \approx \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) \\
-      \displaystyle \frac{d (x_2^*+\delta x_2)}{d t} \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2)
-    \end{array}
-  \right.
+  \displaystyle \frac{d x^{a+1}}{d x} = \frac{d (x \cdot x^a}{d x} = x \cdot ax^{a-1} + x^a = (a+1)(x^a)
+\end{eqnarray}
+<p>となり，\(a+1\)においても公式が成り立つことが示せます。(途中の式変形に関数の積の微分公式を使っています。)</p>
+<p>また，\(a-1\)においても，
+\begin{eqnarray}
+  \displaystyle \frac{d x^{a-1}}{d x} = \frac{d (x \cdot x^a}{d x} = x \cdot ax^{a-1} + x^a = (a+1)(x^a)
 \end{eqnarray}
 	
 \begin{eqnarray}
