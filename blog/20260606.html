@@ -159,7 +159,7 @@
 <p>「誰が思いつくねん」第二弾です。黙って暗記しましょう。ちなみにこの公式にはLeibniz ruleとかいうカッコいい名前がついています。</p>
 </section>
 <section>
-<h4>3. 関数の商の微分</h4>
+<h4>4. 関数の商の微分</h4>
 <p>この形はあまり見かけませんが，次に出てくるべき関数の微分公式を導出するために必要なので，証明しておきます。</p>
 \begin{eqnarray}
     \displaystyle ( \frac{f(x)}{g(x)} )' = \frac{f' g - g' f}{g^2}   
@@ -180,21 +180,22 @@
 <p>となり公式を満たせました。誰が思いｔ</p>
 </section>
 <section>
-<h4>4. べき関数の微分</h4>
+<h4>5. べき関数の微分</h4>
 <p>微分公式と言えばこれ。「肩をおろして1を引く～♪」です。</p>
 \begin{eqnarray}
     \displaystyle \frac{d x^a}{d x} = a x^{a-1}  
 \end{eqnarray}
-<p>証明してみましょう。数学的帰納法とかいうやつを使ってみます。</p>
-<p>まず，ある\(a\)について上の公式が成り立つと仮定します。その時，</p>
+<p>まずは\(a\)が自然数の場合について証明してみましょう。数学的帰納法とかいうやつを使ってみます。</p>
+<p>はじめに，ある\(a\)について上の公式が成り立つと仮定します。その時，</p>
 \begin{eqnarray}
   \displaystyle \frac{d x^{a+1}}{d x} = \frac{d (x \cdot x^a}{d x} = x \cdot ax^{a-1} + x^a = (a+1)(x^a)
 \end{eqnarray}
 <p>となり，\(a+1\)においても公式が成り立つことが示せます。(途中の式変形に関数の積の微分公式を使っています。)</p>
-<p>また，\(a-1\)においても，
+<p>\(a=1\)のとき，
 \begin{eqnarray}
-  \displaystyle \frac{d x^{a-1}}{d x} = \frac{d (x \cdot x^a}{d x} = x \cdot ax^{a-1} + x^a = (a+1)(x^a)
+  \displaystyle \lim_{h \to 0} \frac{x+h-x}{h} = 1 (=1 x^0)
 \end{eqnarray}
+<p>なので，あとはドミノ倒し式にすべての自然数が公式を満たすことになります。(1が満たすなら2も満たす，2が満たすなら3も満たす，3も満たすなら...)
 	
 \begin{eqnarray}
   \Rightarrow
