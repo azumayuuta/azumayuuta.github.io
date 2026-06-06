@@ -168,14 +168,14 @@
 <p>証明は，微分の定義より，</p>
 \begin{eqnarray}
  \displaystyle ( \frac{f(x)}{g(x)} )' &=&  \lim_{h \to 0} \frac{f(x+h)/g(x+h) - f(x)/g(x)}{h} \\
- &=& \lim_{h \to 0} \frac{f(x+h)/g(x+h) - f(x)/g(x)}{h} \frac{g(x)g(x+h)}{g(x)g(x+h)}\\
- &=& \lim_{h \to 0} \frac{f(x+h) g(x) - f(x) g(x+h)}{h} \frac{1}{g(x)g(x+h)}\\
- &=& \lim_{h \to 0} \frac{f(x+h) g(x) - f(x)g(x) + f(x)g(x) - f(x) g(x+h)}{h} \frac{1}{g(x)g(x+h)}\\
- &=& \lim_{h \to 0} \frac{ \{ f(x+h)-f(x) \} g(x) + \{ g(x+h)-g(x) \} f(x)}{h} \frac{1}{g(x)g(x+h)}\\
+ &=& \lim_{h \to 0} \frac{f(x+h)/g(x+h) - f(x)/g(x)}{h} \cdot \frac{g(x)g(x+h)}{g(x)g(x+h)}\\
+ &=& \lim_{h \to 0} \frac{f(x+h) g(x) - f(x) g(x+h)}{h} \cdot \frac{1}{g(x)g(x+h)}\\
+ &=& \lim_{h \to 0} \frac{f(x+h) g(x) - f(x)g(x) + f(x)g(x) - f(x) g(x+h)}{h} \cdot \frac{1}{g(x)g(x+h)}\\
+ &=& \lim_{h \to 0} \frac{ \{ f(x+h)-f(x) \} g(x) + \{ g(x+h)-g(x) \} f(x)}{h} \cdot \frac{1}{g(x)g(x+h)}\\
 \end{eqnarray}
 <p>\(h \to 0\)の極限を考えると</p>
 \begin{eqnarray}
-    = \displaystyle (f(x)' g(x) - g(x)' f(x)) \frac{1}{g(x)^2}   
+    = \displaystyle \{ f(x)' g(x) - g(x)' f(x) \} \cdot \frac{1}{g(x)^2}   
 \end{eqnarray}
 <p>となり公式を満たせました。誰が思いｔ</p>
 </section>
@@ -188,52 +188,37 @@
 <p>まずは\(a\)が自然数の場合について証明してみましょう。数学的帰納法とかいうやつを使ってみます。</p>
 <p>はじめに，ある\(a\)について上の公式が成り立つと仮定します。その時，</p>
 \begin{eqnarray}
-  \displaystyle \frac{d x^{a+1}}{d x} = \frac{d (x \cdot x^a}{d x} = x \cdot ax^{a-1} + x^a = (a+1)(x^a)
+  \displaystyle \frac{d x^{a+1}}{d x} = \frac{d (x \cdot x^a)}{d x} = x \cdot ax^{a-1} + x^a = (a+1)(x^a)
 \end{eqnarray}
-<p>となり，\(a+1\)においても公式が成り立つことが示せます。(途中の式変形に関数の積の微分公式を使っています。)</p>
+<p>となり，\(a+1\)においても公式が成り立つことが示せます。(途中の式変形に積の微分公式を使っています。)</p>
 <p>\(a=1\)のとき，
 \begin{eqnarray}
   \displaystyle \lim_{h \to 0} \frac{x+h-x}{h} = 1 (=1 x^0)
 \end{eqnarray}
 <p>なので，あとはドミノ倒し式にすべての自然数が公式を満たすことになります。(1が満たすなら2も満たす，2が満たすなら3も満たす，3も満たすなら...)
-	
+<p>次に\(a\)が負の整数である場合について証明してみましょう。ここでさっきの商の微分公式を使います。</p>
+<p>\(a=-b\) と置きます。ただしbは自然数です。</p>
 \begin{eqnarray}
-  \Rightarrow
-  \frac{d}{d t}
-  \begin{pmatrix}
-   x_1^*+\delta x_1 \\
-   x_2^*+\delta x_2
-  \end{pmatrix}
-  \approx
-  \begin{pmatrix}
-   \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} & \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} \\
-   \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} & \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X}
-  \end{pmatrix}
-  \begin{pmatrix}
-   \delta x_1 \\
-   \delta x_2
-  \end{pmatrix}
+ (x^{-b})' = (\frac{1}{x^b})'= \frac{0x^b-bx^{b-1}}{x^{2b}} = -bx^{b-1-2b} = -bx^{-b-1}
 \end{eqnarray}
-<p>\(x_1^*\)および\(x_2^*\)は定数なので，</p>
+<p>ということで見事に公式を満たしました。</p>
+<p>蛇足かもしれませんが\(a=0\)では</p>
 \begin{eqnarray}
-  \frac{d}{d t}
-  \begin{pmatrix}
-   \delta x_1 \\
-   \delta x_2
-  \end{pmatrix}
-  \approx
-  \begin{pmatrix}
-   \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} & \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} \\
-   \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} & \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X}
-  \end{pmatrix}
-  \begin{pmatrix}
-   \delta x_1 \\
-   \delta x_2
-  \end{pmatrix}
+  (x^0)'=0 (= 0x^{-1})
 \end{eqnarray}
-<p>となります。これで固定点近傍の状態点 (の固定点からの距離) の時間発展を近似することができました。三次元以上の系でも同じような形になるのは，まあ容易に想像できますよね。</p>
-<p>ちなみに，右辺にある正方行列のような，偏微分係数を集めた行列をヤコビ行列と言います。ヤコビさんが考えたんですかね。よく知りません。</p>
-<p>上のような近似を得て何がうれしいかというと <br> (1) この形の方程式の一般解は既知である (初期値が与えられれば解析的に解ける) <br> (2) 式中のヤコビ行列の固有値を求めるだけで固定点の安定性を判別できる <br> の主に二点ですね。</p>
+<p>で公式を満たしています。ここまでで\(a\)が整数の場合を網羅することができました。最後に\(a\)の範囲を有理数まで広げてみましょう。</p>
+<p>\(a=\frac{c}{b} ; b>0, b,c \in \mathbb{Z}\)と置くと，</p>
+\begin{eqnarray}
+  \displaystyle (x^a)^b &=& x^c \\
+  \frac{d (x^a)^b}{d x} &=& \frac{d x^c}{d x} \\
+  \frac{d (x^a)^b}{d x^a} frac{d x^a}{d x} &=& cx^{c-1} \\
+  bx^a(b-1) \frac{d x^a}{d x} &=& cx^{c-1} \\
+  \frac{d (x^a)^b}{d x^a} &=& \frac{cx^{c-1}}{bx^{a(b-1)}} \\
+  \frac{d (x^a)^b}{d x^a} &=& \frac{c}{b} \frac{x^{c-1}}{x^{c-a)}} \\
+  \frac{d (x^a)^b}{d x^a} &=& \frac{c}{b} x^{(c-1)-(c-a)} \\
+  \frac{d (x^a)^b}{d x^a} &=& ax^{a-1)} \\
+\end{eqnarray}
+<p>式変形がやや複雑でしたが，示すことができました。\(a\)は無理数にも拡張できるそうですが，私にはやや難解なのでまた今度。</p>
 </section>
 <section>	
 <p>さて，MathJaxを使って数式を書いてみました。初めてでしたが案外いけましたね。ただやっぱり慣れは必要そうです。LaTeXの文法とほぼ同じらしいので，練習していきたいですね。</p>
