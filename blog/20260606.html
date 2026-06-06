@@ -207,22 +207,33 @@
   (x^0)'=0 (= 0x^{-1})
 \end{eqnarray}
 <p>で公式を満たしています。ここまでで\(a\)が整数の場合を網羅することができました。最後に\(a\)の範囲を有理数まで広げてみましょう。</p>
-<p>\(a=\frac{c}{b} ; b>0, b,c \in \mathbb{Z}\)と置くと，</p>
+<p>\(a=\frac{c}{b} ( b>0, b,c \in \mathbb{Z} )\)と置くと，</p>
 \begin{eqnarray}
   \displaystyle (x^a)^b &=& x^c \\
   \frac{d (x^a)^b}{d x} &=& \frac{d x^c}{d x} \\
-  \frac{d (x^a)^b}{d x^a} frac{d x^a}{d x} &=& cx^{c-1} \\
+  \frac{d (x^a)^b}{d x^a} \frac{d x^a}{d x} &=& cx^{c-1} \\
   bx^a(b-1) \frac{d x^a}{d x} &=& cx^{c-1} \\
   \frac{d (x^a)^b}{d x^a} &=& \frac{cx^{c-1}}{bx^{a(b-1)}} \\
   \frac{d (x^a)^b}{d x^a} &=& \frac{c}{b} \frac{x^{c-1}}{x^{c-a)}} \\
   \frac{d (x^a)^b}{d x^a} &=& \frac{c}{b} x^{(c-1)-(c-a)} \\
   \frac{d (x^a)^b}{d x^a} &=& ax^{a-1)} \\
 \end{eqnarray}
-<p>式変形がやや複雑でしたが，示すことができました。\(a\)は無理数にも拡張できるそうですが，私にはやや難解なのでまた今度。</p>
+<p>途中に合成関数の微分公式を使っています。式変形がやや複雑でしたが，示すことができましたね。\(a\)は無理数にも拡張できるそうですが，私にはやや難解なのでまた今度。</p>
 </section>
 <section>	
-<p>さて，MathJaxを使って数式を書いてみました。初めてでしたが案外いけましたね。ただやっぱり慣れは必要そうです。LaTeXの文法とほぼ同じらしいので，練習していきたいですね。</p>
-<p>今日はこの辺で。また次の記事で会いましょう。</p>
+<h4>6. 指数関数の微分</h4>
+<p>指数関数は物理でやたらと出てきます。さらには心理学 (精神物理学) でもよく目にする関数です。</p>
+\begin{eqnarray}
+    \displaystyle \frac{d a^x}{d x} = a^x ln a   
+\end{eqnarray}
+<p>証明ですが，指数関数と聞いたらネイピア数をねじ込みたくなるものです。だってあんな便利な数，使わずにいられるわけありません。</p>
+\begin{eqnarray}
+ \displaystyle a^x &=& e^{x ln a} \\
+ \frac{d a^x}{d x} &=& ln a e^{x ln a} \\
+ \frac{d a^x}{d x} &=& a^x ln a
+\end{eqnarray}
+<p>なんてシンプル。途中に合成関数の微分公式を使っています。</p>
+</section>
 </section>
 
 </main>
