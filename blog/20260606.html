@@ -129,17 +129,22 @@
 <p>証明してみましょう。</p>
 <p>微分の定義より，</p>
 \begin{eqnarray}
- \displaystyle \frac{d f(g(x))}{d x} &=  \lim_{h \to 0} \frac{f(g(x+h))-f(g(x))}{h} \\
- &= \lim_{h \to 0} \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)} \frac{g(x+h)-g(x)}{h} \\
+ \displaystyle \frac{d f(g(x))}{d x} &=&  \lim_{h \to 0} \frac{f(g(x+h))-f(g(x))}{h} \\
+ &=& \lim_{h \to 0} \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)} \frac{g(x+h)-g(x)}{h} \\
 \end{eqnarray}
 <p>すでに「誰が思いつくねん」という感じですが，ここからもうひとひねり，\(g(x+h)-g(x)\) を適当に\(j\)とか置きます。</p>
 <p>\(h \to 0\)のとき\(j \to 0\)なので，\(h\)は\(j\)に置き換え可能です。</p>
 \begin{eqnarray}
- = \lim_{j \to 0} \frac{f(g(x+h))-f(g(x))}{j} \lim_{h \to 0} \frac{g(x+h)-g(x)}{h} \\
- = \frac{d f}{d g} \frac{d g}{d x}  
+ &=& \lim_{j \to 0} \frac{f(g(x+h))-f(g(x))}{j} \lim_{h \to 0} \frac{g(x+h)-g(x)}{h} \\
+ &=& \frac{d f}{d g} \frac{d g}{d x}  
 \end{eqnarray}
 <p>こんなの知らなきゃ思いつけないので，あきらめて暗記しましょう。結果はエレガントなので覚えやすいですね。</p>
-\begin{eqnarray}
+</section>
+<section>
+<h4>3. 関数の積の微分</h4>
+<p>関数と関数の積を微分すると，面白い形になります。</p>
+<p>合成関数の微分公式は美しいですし，至るところに顔を出してくる超便利な公式でもあります。</p>
+	\begin{eqnarray}
 f_1 \approx \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) \\
 f_2 \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2)
 \end{eqnarray}
