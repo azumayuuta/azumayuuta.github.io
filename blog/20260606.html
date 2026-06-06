@@ -235,8 +235,53 @@
 \end{eqnarray}
 <p>なんてシンプル。途中に合成関数の微分公式を使っています。</p>
 </section>
+<section>
+<h4>7. 対数関数の微分</h4>
+<p>長くなってきたので最後，対数関数の微分です。</p>
+\begin{eqnarray}
+    \displaystyle \frac{d \log_a x}{d x} = \frac{1}{x \ln a}   
+\end{eqnarray}
+<p>\(e\)を底にとる場合が特に有名ですね。</p>
+\begin{eqnarray}
+    \displaystyle \frac{d \ln x}{d x} = \frac{1}{x}   
+\end{eqnarray}
+<p>証明してみましょう。</p>
+<p>微分の定義より，</p>
+\begin{eqnarray}
+    \displaystyle \frac{d \log_a x}{d x} &=& \lim_{h \to 0} \frac{\log_a(x+h) - \log_a x}{h} \\
+	&=& \lim_{h \to 0} \log_a \frac{x+h}{x} \cdot \frac{1}{h} \\
+	&=& \lim_{h \to 0} \log_a (1 + \frac{h}{x}) \frac{x}{h} \frac{1}{x} 
+\end{eqnarray}
+<p>ここで\(\frac{h}{x}=k\)と置きます。「なぜ？」など考えてはいけません。</p>
+<p>\(h \to 0\)のとき\(k \to 0\)なので，</p>
+\begin{eqnarray}
+    \displaystyle = \lim_{k \to 0} \log_a (1 + k) \frac{1}{k} \frac{1}{x} \\
+	= \lim_{k \to 0} \log_a (1 + k)^{1/k}\frac{1}{x}
+\end{eqnarray}
+<p>さてここで式中にネイピア数の定義\(\lim_{k \to 0}(1 + k)^{1/k}\)が現れました。ありがたいですね。</p>
+\begin{eqnarray}
+    \displaystyle = \log_a e \frac{1}{x} \\
+	= \frac{1}{\log_e a} \frac{1}{x} \\
+\end{eqnarray}
+<p>ということで公式を満たしてくれました。最後の式変形には底の変換公式を使っています。</p>
+\begin{eqnarray}
+    \displaystyle \log_a b = /frac{\log_c b}{\log_c a} 
+\end{eqnarray}
+<p>の\(b=c\)の場合ですね。この変換公式は因数の羅列をイメージすれば納得しやすいと思います。\(a\)が\(\log_a b\)個あると\(b\)になり，\(c\)が\(\log_c a\)個あると\(a\)になりますから，\(c\)は\(_log_c a \cdot log_a b\)個あれば\(b\)になれますよね。</p>
+\begin{eqnarray}
+    \displaystyle \log_c a \cdot \log_a b =  = \log_c b \\
+	\log_a b = /frac{\log_c b}{\log_c a} 
+\end{eqnarray}
+<p>難しくありませんね。</p>
 </section>
 
+<section>
+<p>かなり長くなってしまいましたが，いい復習になりました。</p>
+<p>こうしてみると本当に，既知の公式を利用できるって幸せなことですね。独力じゃ絶対に導出できません。</p>
+<p>微分公式を覚えておけば積分もできるようになりますよね。微分積分学の基本定理ってやつです。これについても追い追い言語化してみたいです。</p>
+<p>それでは，今日はここまで。また次の記事で会いましょう。</p>
+</section>
+	
 </main>
 
 </div>
