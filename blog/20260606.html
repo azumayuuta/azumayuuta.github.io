@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>いろいろな微分公式 | AzumaYuta Kobe.U</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="神戸大学 人間発達環境学研究科 東 優汰 のホームページです">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../icon.jpg">
+<!--▼MathJax-->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body class="home">
+
+<div id="container">
+
+<header>
+
+<h1 id="logo"><a href="../index.html">AzumaYuta Kobe.U</a></h1>
+
+<!--開閉メニュー-->
+<div id="menubar">
+
+<nav>
+<ul>
+<li><a disabled="disabled">MENU</a>
+	<ul>
+	<li><a href="../profile.html">PROFILE</a></li>
+	<li><a href="../publications.html">PUBLICATIONS</a></li>
+	<li><a href="../other_works.html">OTHER WORKS</a></li>
+	<li><a href="../links.html">LINKS</a></li>
+	</ul>
+</li>
+<li><a href="../blog.html">BLOG</a></li>
+<li><a href="../contact.html">CONTACT</a></li>
+</ul>
+</nav>
+
+<!--
+	<div class="sh">小さな端末でのみ表示させたい情報があれば、ここに記入して下さい。</div>
+-->
+	
+</div>
+<!--/#menubar-->
+
+</header>
+
+<!--メイン画像
+<div class="mainimg">
+
+<div class="slide img1">
+<picture><source media="(max-width: 800px)" srcset="mainimg1.jpg"><img src="mainimg1.jpg" alt=""></picture>
+</div>
+
+</div>
+-->
+	
+<div id="contents">
+
+<main>
+
+<section>
+
+<!--frame12-biz1（2026.4公開）-->
+
+<!--このフレームで使用しているカラーセット。（css/theme.cssで一括置き換えできます-->
+<p>
+<span style="color: var(--primary-color);font-size: 2rem;">●</span>
+<span style="color: var(--light-color);font-size: 2rem;">●</span>
+<span style="color: var(--accent-color);font-size: 2rem;">●</span>
+<span style="color: var(--bg-inverse-color);font-size: 2rem;">●</span>
+</p>
+
+<!--
+<h3>利用規約</h3>
+<ul>
+<li>このテンプレートは、<a href="https://template-party.com/">Template Party</a>にて無料配布している<a href="https://template-party.com/parts/">パーツ</a>です。必ずダウンロード先のサイトの<a href="https://template-party.com/read.html">利用規約</a>をご一読の上でご利用下さい。</li>
+<li>最下部の著作表示『Web Design:Template-Party』は無断で削除しないで下さい。わざと見えなく加工する事も禁止です。下部の著作を外したい場合は<a href="https://template-party.com/">Template-Party</a>の<a href="https://template-party.com/member.html">ライセンス契約</a>を行う事でHP下部の著作を外す事ができます。</li>
+</ul>
+
+<h3>メイン画像について</h3>
+<ul>
+<li>メイン画像を入れ替えたい場合は、弊社素材サイト<a href="https://haconana.com/">haconana</a>をご活用下さい。</li>
+<li>画面幅800px以下の端末向けに小さな画像を使いたい場合は、htmlのsrcsetで指定されている画像ファイル名を準備したものに書き換えて下さい。デフォルトでは大きな端末用と同じファイルが指定されています。mediaの値はcssのメディアクエリと同じなので、例えば縦長端末用などの指定もできます。</li>
+</ul>
+
+<h3>メニューについて</h3>
+<ul>
+<li>画面幅900px未満で開閉メニューになります。ここのブレイクポイントは、main.jsの「const breakPoint = 900;」で変更が可能です。</li>
+</ul>
+-->
+
+<section>
+<h2>いろいろな微分公式</h2>
+<p>ニュートン力学の第二法則によれば，力 (force) とは運動量の微分です。</p>
+\begin{eqnarray}
+    \begin{array}{}
+      p &=& m \displaystyle \frac{d x}{d t} \\
+      p' &=& m \displaystyle \lparen \frac{d x}{d t} \rparen ' \\
+      F %=% m \displaystyle \frac{d^2 x}{d t^2}
+    \end{array}
+\end{eqnarray}
+<p>ただし質量 \(m\) は定数とします。光速近くまで加速させない限りそう考えて差し支えないはずです。</p>
+<p>上の式を順当に解釈すれば，力とは「物体の運動状態が変化するときにはたらいている何らかのもの」ということになります。(こうして考えてみると「力」って構成概念なんですよね。なんだか意外です。)</p>
+<p>さてこのようにニュートン力学，およびそこから生まれた種々の物理学は「運動」をプリンシパルな対象として成立しています。<p>
+<p>よって「運動」を数学的に取り扱うための道具である<span class="color-accent">微分</span>は，物理学において超重要な役割を演じるわけです。</p>
+<p>筆者が教わっている物理の先生曰く，物理学とは「現象を微分方程式で表して，数学的に考察して，そしたらいつの間にか何かが分かっている」というような営みだそうです。</p>
+<p>ただ微分方程式って取り扱いが難しいです。でも安心，偉大な先人たちがたくさんの公式を見つけてくれているので，私たち凡夫はその恩恵にあやかることができます。</p>
+<p>今日は備忘録もかねて，いろいろな微分公式を証明も含めて列挙していこうと思います。</p>
+</section>
+<section>
+<h4>1. 微分の定義</h4>
+<p>まずは微分の定義から始めましょう。ある関数\(f(x)\)が与えられたときにその微分は</p>
+\begin{eqnarray}
+  \displaystyle \lim_{h \to 0} \displaystyle \frac{f(x+h)-f(x)}{h}
+\end{eqnarray}
+<p>です。関数が線形でない限り，上式は\(h\)の大きさによっていろいろな値を返しますが，\(h \to 0\)の極限をとればたいていある値に収束していきます。</p>
+<p>収束先の値が<span class="color-accent">微分係数</span>です。もし収束しなかった場合は微分不可能ということです。値が飛んでいるところとか，グラフが尖っているところとかでは収束しませんね。</p>
+<p>\(x\)に具体的な値を代入すればその位置での具体的な微分係数が出てきますし，変数のまま抽象的に計算すればさまざまな\(x\)に対して微分係数を返してくれる<span class="color-accent">導関数</span>を得ることもできます。</p>	
+</section>
+<section>
+<h4>2. 合成関数の微分</h4>
+<p>関数の中に関数が入れ子になっているようなものを合成関数といいます。</p>
+<p>合成関数の微分公式は美しいですし，至るところに顔を出してくる超便利な公式でもあります。</p>
+\begin{eqnarray}
+    \displaystyle \frac{d f(g(x))}{d x} = \frac{d f}{d g} \frac{d g}{d x}  
+\end{eqnarray}
+<p>ですね。</p>
+<p>ここで，右辺をテイラー展開してみます。\(X\)は固定点近傍の点なので，固定点での近似をそのまま使ってしまいましょう。</p>
+\begin{eqnarray}
+f_1 \simeq f_1(x_1^*,x_2^*) +  \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) + \ldots \\
+f_2 \simeq f_2(x_1^*,x_2^*) +  \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) + \ldots
+\end{eqnarray}
+<p>とりあえず二次以降の項は無視します。含めると面倒くさいからです。</p>
+<p>それから零次の項ですが (こんな言い方するのか？) 今考えているのは固定点での近似ですから，当然のように\[f_1(x_1^*,x_2^*),f_2(x_1^*,x_2^*)=0\]です。結局，</p>
+\begin{eqnarray}
+f_1 \approx \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) \\
+f_2 \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2)
+\end{eqnarray}
+<p>ということですね。大雑把ですが，実用上この近似で十分なことが多いようです。</p>
+</section>
+<section>
+<h4>3. 行列表示</h4>
+<p>さてあとは何も難しくありません。上の近似を系の連立微分方程式に代入して，行列表示に直すだけです。</p>
+\begin{eqnarray}
+  \left\{
+    \begin{array}{l}
+      \displaystyle \frac{d (x_1^*+\delta x_1)}{d t}=f_1(x_1,x_2) \\
+      \displaystyle \frac{d (x_2^*+\delta x_2)}{d t}=f_2(x_1,x_2) \\
+    \end{array}
+  \right.
+\end{eqnarray}
+	
+\begin{eqnarray}
+  \Rightarrow 
+  \left\{
+	\begin{array}{l}
+      \displaystyle \frac{d (x_1^*+\delta x_1)}{d t} \approx \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) \\
+      \displaystyle \frac{d (x_2^*+\delta x_2)}{d t} \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2)
+    \end{array}
+  \right.
+\end{eqnarray}
+	
+\begin{eqnarray}
+  \Rightarrow
+  \frac{d}{d t}
+  \begin{pmatrix}
+   x_1^*+\delta x_1 \\
+   x_2^*+\delta x_2
+  \end{pmatrix}
+  \approx
+  \begin{pmatrix}
+   \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} & \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} \\
+   \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} & \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X}
+  \end{pmatrix}
+  \begin{pmatrix}
+   \delta x_1 \\
+   \delta x_2
+  \end{pmatrix}
+\end{eqnarray}
+<p>\(x_1^*\)および\(x_2^*\)は定数なので，</p>
+\begin{eqnarray}
+  \frac{d}{d t}
+  \begin{pmatrix}
+   \delta x_1 \\
+   \delta x_2
+  \end{pmatrix}
+  \approx
+  \begin{pmatrix}
+   \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} & \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} \\
+   \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} & \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X}
+  \end{pmatrix}
+  \begin{pmatrix}
+   \delta x_1 \\
+   \delta x_2
+  \end{pmatrix}
+\end{eqnarray}
+<p>となります。これで固定点近傍の状態点 (の固定点からの距離) の時間発展を近似することができました。三次元以上の系でも同じような形になるのは，まあ容易に想像できますよね。</p>
+<p>ちなみに，右辺にある正方行列のような，偏微分係数を集めた行列をヤコビ行列と言います。ヤコビさんが考えたんですかね。よく知りません。</p>
+<p>上のような近似を得て何がうれしいかというと <br> (1) この形の方程式の一般解は既知である (初期値が与えられれば解析的に解ける) <br> (2) 式中のヤコビ行列の固有値を求めるだけで固定点の安定性を判別できる <br> の主に二点ですね。</p>
+</section>
+<section>	
+<p>さて，MathJaxを使って数式を書いてみました。初めてでしたが案外いけましたね。ただやっぱり慣れは必要そうです。LaTeXの文法とほぼ同じらしいので，練習していきたいですね。</p>
+<p>今日はこの辺で。また次の記事で会いましょう。</p>
+</section>
+
+</main>
+
+</div>
+<!--/#contents-->
+
+<!--以下の行はテンプレートの著作。削除しないで下さい。-->
+<span class="pr"><a disabled="disabled">《© Azuma, Y. 2026》</a></span>
+
+<!--メニューオーバーレイ（メニュー外クリックで閉じる用）-->
+<div id="menubar-overlay"></div>
+
+</div>
+<!--/#container-->
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+<!--開閉ボタン（ハンバーガーアイコン）-->
+<div id="menubar_hdr">
+<span></span><span></span><span></span>
+</div>
+
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--パララックス（inview）-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<script src="../jquery.inview_set.js"></script>
+
+<!--このテンプレート専用のスクリプト-->
+<script src="../main.js"></script>
+<script src="../parts.js"></script>
+
+</body>
+</html>
