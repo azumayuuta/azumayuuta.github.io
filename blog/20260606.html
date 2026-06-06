@@ -151,11 +151,10 @@
 \begin{eqnarray}
  \displaystyle \frac{d f(x) g(x)}{d x} &=&  \lim_{h \to 0} \frac{f(x+h) g(x+h) - f(x) g(x)}{h} \\
  &=& \lim_{h \to 0} \frac{f(x+h) g(x+h) - f(x+f) g(x) + f(x+h) g(x) - f(x) g(x)}{h} \\
- &=& \lim_{h \to 0} \frac{f(x+h) g(x+h) - f(x+f) g(x) + f(x+h) g(x) - f(x) g(x)}{h} \\
  &=& \lim_{h \to 0} \frac{f(x+h) (g(x+h) -  g(x)) + g(x) (f(x+h) - f(x))}{h} \\
  &=& \lim_{h \to 0} \frac{f(x+h) (g(x+h) -  g(x))}{h} + \lim_{h \to 0} \frac{g(x) (f(x+h) - f(x))}{h} \\
- &=& \lim_{h \to 0} \frac{g(x+h) -  g(x)}{h} f(x+h) + \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} g(x) \\
- &=& \frac{d f(x) g(x)}{d x} = f(x) \frac{d g(x)}{d x} + g(x) \frac{d f(x)}{d x}   
+ &=& f(x+h) \cdot \lim_{h \to 0} \frac{g(x+h) -  g(x)}{h} + g(x) \cdot \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} \\
+ &=& f(x) \frac{d g(x)}{d x} + g(x) \frac{d f(x)}{d x}   
 \end{eqnarray}
 <p>「誰が思いつくねん」第二弾です。黙って暗記しましょう。</p>
 </section>
@@ -163,9 +162,9 @@
 <h4>4. べき関数の微分</h4>
 <p>微分公式と言えばこれ。「肩をおろして1を引く～♪」です。</p>
 \begin{eqnarray}
-    \displaystyle \frac{d x^a)}{d x} = a x^{a-1}  
+    \displaystyle \frac{d x^a}{d x} = a x^{a-1}  
 \end{eqnarray}
-	
+<p>証明してみましょう。数学的帰納法とかいうやつを使ってみます。</p>	
 \begin{eqnarray}
   \Rightarrow 
   \left\{
