@@ -96,9 +96,9 @@
 <p>ニュートン力学の第二法則によれば，力 (force) とは運動量の微分です。</p>
 \begin{eqnarray}
     \begin{array}{}
-      p &=& m \displaystyle \frac{d x}{d t} \\
-      p' &=& m \displaystyle \lparen \frac{d x}{d t} \rparen ' \\
-      F %=% m \displaystyle \frac{d^2 x}{d t^2}
+      p &= m \displaystyle \frac{d x}{d t} \\
+      p' &= m \displaystyle ( \frac{d x}{d t} ) ' \\
+      F &= m \displaystyle \frac{d^2 x}{d t^2}
     \end{array}
 \end{eqnarray}
 <p>ただし質量 \(m\) は定数とします。光速近くまで加速させない限りそう考えて差し支えないはずです。</p>
@@ -113,7 +113,7 @@
 <h4>1. 微分の定義</h4>
 <p>まずは微分の定義から始めましょう。ある関数\(f(x)\)が与えられたときにその微分は</p>
 \begin{eqnarray}
-  \displaystyle \lim_{h \to 0} \displaystyle \frac{f(x+h)-f(x)}{h}
+  \displaystyle \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}
 \end{eqnarray}
 <p>です。関数が線形でない限り，上式は\(h\)の大きさによっていろいろな値を返しますが，\(h \to 0\)の極限をとればたいていある値に収束していきます。</p>
 <p>収束先の値が<span class="color-accent">微分係数</span>です。もし収束しなかった場合は微分不可能ということです。値が飛んでいるところとか，グラフが尖っているところとかでは収束しませんね。</p>
@@ -126,14 +126,19 @@
 \begin{eqnarray}
     \displaystyle \frac{d f(g(x))}{d x} = \frac{d f}{d g} \frac{d g}{d x}  
 \end{eqnarray}
-<p>ですね。</p>
-<p>ここで，右辺をテイラー展開してみます。\(X\)は固定点近傍の点なので，固定点での近似をそのまま使ってしまいましょう。</p>
+<p>証明してみましょう。</p>
+<p>微分の定義より，</p>
 \begin{eqnarray}
-f_1 \simeq f_1(x_1^*,x_2^*) +  \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) + \ldots \\
-f_2 \simeq f_2(x_1^*,x_2^*) +  \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) + \ldots
+ \displaystyle \frac{d f(g(x))}{d x} &=  \lim_{h \to 0} \frac{f(g(x+h))-f(g(x))}{h} \\
+ &= \lim_{h \to 0} \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)} \frac{g(x+h)-g(x)}{h} \\
 \end{eqnarray}
-<p>とりあえず二次以降の項は無視します。含めると面倒くさいからです。</p>
-<p>それから零次の項ですが (こんな言い方するのか？) 今考えているのは固定点での近似ですから，当然のように\[f_1(x_1^*,x_2^*),f_2(x_1^*,x_2^*)=0\]です。結局，</p>
+<p>すでに「誰が思いつくねん」という感じですが，ここからもうひとひねり，\(g(x+h)-g(x)\) を適当に\(j\)とか置きます。</p>
+<p>\(h \to 0\)のとき\(j \to 0\)なので，\(h\)は\(j\)に置き換え可能です。</p>
+\begin{eqnarray}
+ = \lim_{j \to 0} \frac{f(g(x+h))-f(g(x))}{j} \lim_{h \to 0} \frac{g(x+h)-g(x)}{h} \\
+ = \frac{d f}{d g} \frac{d g}{d x}  
+\end{eqnarray}
+<p>こんなの知らなきゃ思いつけないので，あきらめて暗記しましょう。結果はエレガントなので覚えやすいですね。</p>
 \begin{eqnarray}
 f_1 \approx \frac{\partial f_1}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_1}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2) \\
 f_2 \approx \frac{\partial f_2}{\partial x_1}\bigg|_\mathbb{X} (\delta x_1) + \frac{\partial f_2}{\partial x_2}\bigg|_\mathbb{X} (\delta x_2)
