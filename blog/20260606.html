@@ -131,10 +131,11 @@
  \displaystyle \frac{d f(g(x))}{d x} &=&  \lim_{h \to 0} \frac{f(g(x+h))-f(g(x))}{h} \\
  &=& \lim_{h \to 0} \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)} \cdot \frac{g(x+h)-g(x)}{h} \\
 \end{eqnarray}
-<p>すでに「誰が思いつくねん」という感じですが，ここからもうひとひねり，\(g(x+h)-g(x)\) を適当に\(j\)とか置きます。</p>
-<p>\(h \to 0\)のとき\(j \to 0\)なので，極限において\(h\)は\(j\)に置き換え可能です。</p>
+<p>「誰が思いつくねん」という感じですね。ここでそれぞれの分数に注目してみると，右側は明らかに\(g(x)\)を\(x\)で微分した形になっています。</p>
+<p>左側もよく考えると，分母の\(g(x+h)-g(x)\)というのは\(x\)の微小変化\(h\)に対する\(g(x)\)の変化量に他なりません。そして分子は，\(x\)および\(g(x)\)の微小変化に対する\(f(g(x))\)の変化量になっています。</p>
+<p>よって，</p>
 \begin{eqnarray}
- &=& \lim_{j \to 0} \frac{f(g(x+j))-f(g(x))}{j} \cdot \lim_{h \to 0} \frac{g(x+h)-g(x)}{h} \\
+ &=& \lim_{h \to 0} \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)} \cdot \lim_{h \to 0} \frac{g(x+h)-g(x)}{h} \\
  &=& \frac{d f}{d g} \frac{d g}{d x}  
 \end{eqnarray}
 <p>こんなの知らなきゃ思いつけないので，あきらめて暗記しましょう。結果はエレガントなので覚えやすいですね。</p>
@@ -149,8 +150,8 @@
 <p>微分の定義より，</p>
 \begin{eqnarray}
  \displaystyle \frac{d f(x) g(x)}{d x} &=&  \lim_{h \to 0} \frac{f(x+h) g(x+h) - f(x) g(x)}{h} \\
- &=& \lim_{h \to 0} \frac{f(x+h) g(x+h) - f(x+f) g(x) + f(x+h) g(x) - f(x) g(x)}{h} \\
- &=& \lim_{h \to 0} \frac{f(x+h) \{g(x+h) -  g(x)\} + g(x) (\{(x+h) - f(x)\}}{h} \\
+ &=& \lim_{h \to 0} \frac{f(x+h) g(x+h) - f(x+h) g(x) + f(x+h) g(x) - f(x) g(x)}{h} \\
+ &=& \lim_{h \to 0} \frac{f(x+h) \{g(x+h) -  g(x)\} + g(x) \{(x+h) - f(x)\}}{h} \\
  &=& \lim_{h \to 0} \frac{f(x+h) \{g(x+h) -  g(x)\}}{h} + \lim_{h \to 0} \frac{g(x) \{f(x+h) - f(x)\}}{h} \\
  &=& \lim_{h \to 0} f(x+h) \cdot \frac{g(x+h) -  g(x)}{h} + \lim_{h \to 0} g(x) \cdot \frac{f(x+h) - f(x)}{h} \\
  &=& f(x) \frac{d g(x)}{d x} + g(x) \frac{d f(x)}{d x}   
@@ -170,7 +171,7 @@
  &=& \lim_{h \to 0} \frac{f(x+h)/g(x+h) - f(x)/g(x)}{h} \cdot \frac{g(x)g(x+h)}{g(x)g(x+h)}\\
  &=& \lim_{h \to 0} \frac{f(x+h) g(x) - f(x) g(x+h)}{h} \cdot \frac{1}{g(x)g(x+h)}\\
  &=& \lim_{h \to 0} \frac{f(x+h) g(x) - f(x)g(x) + f(x)g(x) - f(x) g(x+h)}{h} \cdot \frac{1}{g(x)g(x+h)}\\
- &=& \lim_{h \to 0} \frac{ \{ f(x+h)-f(x) \} g(x) + \{ g(x+h)-g(x) \} f(x)}{h} \cdot \frac{1}{g(x)g(x+h)}\\
+ &=& \lim_{h \to 0} \frac{ \{ f(x+h)-f(x) \} g(x) - \{ g(x+h)-g(x) \} f(x)}{h} \cdot \frac{1}{g(x)g(x+h)}\\
 \end{eqnarray}
 <p>\(h \to 0\)の極限を考えると</p>
 \begin{eqnarray}
@@ -212,7 +213,7 @@
   \displaystyle (x^a)^b &=& x^c \\
   \frac{d (x^a)^b}{d x} &=& \frac{d x^c}{d x} \\
   \frac{d (x^a)^b}{d x^a} \frac{d x^a}{d x} &=& cx^{c-1} \\
-  bx^a(b-1) \frac{d x^a}{d x} &=& cx^{c-1} \\
+  b(x^a)^{b-1} \frac{d x^a}{d x} &=& cx^{c-1} \\
   \frac{d (x^a)^b}{d x^a} &=& \frac{cx^{c-1}}{bx^{a(b-1)}} \\
   \frac{d (x^a)^b}{d x^a} &=& \frac{c}{b} \frac{x^{c-1}}{x^{c-a)}} \\
   \frac{d (x^a)^b}{d x^a} &=& \frac{c}{b} x^{(c-1)-(c-a)} \\
