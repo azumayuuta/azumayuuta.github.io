@@ -104,8 +104,7 @@
 <p>ただし質量 \(m\) は定数とします。光速近くまで加速させない限り，そう考えて差し支えないはずです。</p>
 <p>上の式を順当に解釈すれば，力とは「物体の運動状態が変化するときにはたらいている何らかのもの」ということになります。(こうして考えてみると力って構成概念なんですよね。なんだか意外です。)</p>
 <p>さてこのようにニュートン力学，およびそこから生まれた種々の物理学は「運動」という概念を基礎に成立しています。<p>
-<p>よって「運動」を数学的に取り扱うための道具である<span class="color-accent">微分</span>は，物理学において超重要な役割を演じるわけです。</p>
-<p>知り合いの先生曰く，物理学とは「現象を微分方程式で表して，数学的に考察して，そしたらいつの間にか何かが分かっている」というような営みだそうです。</p>
+<p>よって「運動」を数学的に取り扱うための道具である<span class="color-accent">微分</span>は，物理学において超重要な役割を演じるわけです。(知り合いの先生曰く，物理学とは「現象を微分方程式で表して，数学的に考察して，そしたらいつの間にか何かが分かっている」というような営みだそうです)</p>
 <p>ただ微分方程式って取り扱いが難しいです。でも安心，偉大な先人たちがたくさんの公式を見つけてくれているので，私たち凡夫はその恩恵にあやかることができます。</p>
 <p>今日は備忘録もかねて，いろいろな微分公式を証明も含めて列挙していこうと思います。</p>
 </section>
@@ -130,12 +129,12 @@
 <p>微分の定義より，</p>
 \begin{eqnarray}
  \displaystyle \frac{d f(g(x))}{d x} &=&  \lim_{h \to 0} \frac{f(g(x+h))-f(g(x))}{h} \\
- &=& \lim_{h \to 0} \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)} \frac{g(x+h)-g(x)}{h} \\
+ &=& \lim_{h \to 0} \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)} \cdot \frac{g(x+h)-g(x)}{h} \\
 \end{eqnarray}
 <p>すでに「誰が思いつくねん」という感じですが，ここからもうひとひねり，\(g(x+h)-g(x)\) を適当に\(j\)とか置きます。</p>
 <p>\(h \to 0\)のとき\(j \to 0\)なので，極限において\(h\)は\(j\)に置き換え可能です。</p>
 \begin{eqnarray}
- &=& \lim_{j \to 0} \frac{f(g(x+j))-f(g(x))}{j} \lim_{h \to 0} \frac{g(x+h)-g(x)}{h} \\
+ &=& \lim_{j \to 0} \frac{f(g(x+j))-f(g(x))}{j} \cdot \lim_{h \to 0} \frac{g(x+h)-g(x)}{h} \\
  &=& \frac{d f}{d g} \frac{d g}{d x}  
 \end{eqnarray}
 <p>こんなの知らなきゃ思いつけないので，あきらめて暗記しましょう。結果はエレガントなので覚えやすいですね。</p>
@@ -144,19 +143,19 @@
 <h4>3. 関数の積の微分</h4>
 <p>関数と関数の積を微分すると，面白い形になります。</p>
 \begin{eqnarray}
-    \displaystyle \frac{d f(x) g(x)}{d x} = f(x) \frac{d g(x)}{d x} + g(x) \frac{d f(x)}{d x}   
+    \displaystyle \frac{d f(x) g(x)}{d x} = f \frac{d g}{d x} + g \frac{d f}{d x}   
 \end{eqnarray}
 <p>証明してみましょう。</p>
 <p>微分の定義より，</p>
 \begin{eqnarray}
  \displaystyle \frac{d f(x) g(x)}{d x} &=&  \lim_{h \to 0} \frac{f(x+h) g(x+h) - f(x) g(x)}{h} \\
  &=& \lim_{h \to 0} \frac{f(x+h) g(x+h) - f(x+f) g(x) + f(x+h) g(x) - f(x) g(x)}{h} \\
- &=& \lim_{h \to 0} \frac{f(x+h) (g(x+h) -  g(x)) + g(x) (f(x+h) - f(x))}{h} \\
- &=& \lim_{h \to 0} \frac{f(x+h) (g(x+h) -  g(x))}{h} + \lim_{h \to 0} \frac{g(x) (f(x+h) - f(x))}{h} \\
+ &=& \lim_{h \to 0} \frac{f(x+h) \{g(x+h) -  g(x)\} + g(x) (\{(x+h) - f(x)\}}{h} \\
+ &=& \lim_{h \to 0} \frac{f(x+h) \{g(x+h) -  g(x)\}}{h} + \lim_{h \to 0} \frac{g(x) \{f(x+h) - f(x)\}}{h} \\
  &=& \lim_{h \to 0} f(x+h) \cdot \frac{g(x+h) -  g(x)}{h} + \lim_{h \to 0} g(x) \cdot \frac{f(x+h) - f(x)}{h} \\
  &=& f(x) \frac{d g(x)}{d x} + g(x) \frac{d f(x)}{d x}   
 \end{eqnarray}
-<p>「誰が思いつくねん」第二弾です。黙って暗記しましょう。ちなみにこの公式にはライプニッツ則 (Leibniz rule) とかいうカッコいい名前がついています。</p>
+<p>「誰が思いつくねん」第二弾です。黙って暗記しましょう。ちなみにこの公式には<span class="color-accent">ライプニッツ則 (Leibniz rule) </span>とかいうカッコいい名前がついています。</p>
 </section>
 <section>
 <h4>4. 関数の商の微分</h4>
@@ -190,12 +189,12 @@
 \begin{eqnarray}
   \displaystyle \frac{d x^{a+1}}{d x} = \frac{d (x \cdot x^a)}{d x} = x \cdot ax^{a-1} + x^a = (a+1)(x^a)
 \end{eqnarray}
-<p>となり，\(a+1\)においても公式が成り立つことが示せます。(途中の式変形に積の微分公式を使っています。)</p>
-<p>\(a=1\)のとき，
+<p>となり，\(a+1\)においても公式が成り立ちます。(途中の式変形に積の微分公式を使っています。)</p>
+<p>ところで，\(a=1\)のとき，
 \begin{eqnarray}
   \displaystyle \lim_{h \to 0} \frac{x+h-x}{h} = 1 (=1 x^0)
 \end{eqnarray}
-<p>なので，あとはドミノ倒し式にすべての自然数が公式を満たすことになります。(1が満たすなら2も満たす，2が満たすなら3も満たす，3も満たすなら...)
+<p>となり公式を満たします。これらのことから，すべての自然数がこの公式を満たすと考えることができます。(1が満たすなら2も満たす，2が満たすなら3も満たす，3も満たすなら...)
 <p>次に\(a\)が負の整数である場合について証明してみましょう。ここでさっきの商の微分公式を使います。</p>
 <p>\(a=-b\) と置きます。ただしbは自然数です。</p>
 \begin{eqnarray}
@@ -208,7 +207,7 @@
 \end{eqnarray}
 <p>で公式を満たしています。</p>
 <p>さて，ここまでで\(a\)が整数の場合を網羅することができました。最後に\(a\)の範囲を有理数まで広げてみましょう。</p>
-<p>\(a=\frac{c}{b} ( b>0, b,c \in \mathbb{Z} )\)と置くと，</p>
+<p>\(a=\frac{c}{b} ( b>0; b,c \in \mathbb{Z} )\)と置くと，</p>
 \begin{eqnarray}
   \displaystyle (x^a)^b &=& x^c \\
   \frac{d (x^a)^b}{d x} &=& \frac{d x^c}{d x} \\
@@ -217,9 +216,10 @@
   \frac{d (x^a)^b}{d x^a} &=& \frac{cx^{c-1}}{bx^{a(b-1)}} \\
   \frac{d (x^a)^b}{d x^a} &=& \frac{c}{b} \frac{x^{c-1}}{x^{c-a)}} \\
   \frac{d (x^a)^b}{d x^a} &=& \frac{c}{b} x^{(c-1)-(c-a)} \\
-  \frac{d (x^a)^b}{d x^a} &=& ax^{a-1)} \\
+  \frac{d (x^a)^b}{d x^a} &=& ax^{a-1} \\
 \end{eqnarray}
-<p>途中に合成関数の微分公式を使っています。式変形がやや複雑でしたが，示すことができましたね。\(a\)は無理数にも拡張できるそうですが，私にはやや難解なのでまた今度。</p>
+<p>途中に合成関数の微分公式を使っています。式変形がやや複雑ですが，示すことができましたね。</p>
+<p>\(a\)は無理数にも拡張できるそうですが，私にはやや難解なのでまた今度。</p>
 </section>
 <section>	
 <h4>6. 指数関数の微分</h4>
@@ -230,7 +230,7 @@
 <p>証明ですが，指数関数と聞いたらネイピア数をねじ込みたくなるものです。だってあんな便利な数，使わずにいられるわけありません。</p>
 \begin{eqnarray}
  \displaystyle a^x &=& e^{x \ln a} \\
- \frac{d a^x}{d x} &=& \ln a e^{x \ln a} \\
+ \frac{d a^x}{d x} &=& e^{x \ln a} \ln a \\
  \frac{d a^x}{d x} &=& a^x \ln a
 \end{eqnarray}
 <p>なんてシンプル。途中に合成関数の微分公式を使っています。</p>
@@ -258,24 +258,25 @@
     \displaystyle = \lim_{k \to 0} \log_a (1 + k) \frac{1}{k} \frac{1}{x} \\
 	= \lim_{k \to 0} \log_a (1 + k)^{1/k}\frac{1}{x}
 \end{eqnarray}
-<p>さてここで式中にネイピア数の定義\(\lim_{k \to 0}(1 + k)^{1/k}\)が現れました。ありがたいですね。</p>
+<p>さてここで，式中にネイピア数の定義\(\lim_{k \to 0}(1 + k)^{1/k}\)が現れました。ありがたいですね。</p>
 \begin{eqnarray}
     \displaystyle = \log_a e \frac{1}{x} \\
 	= \frac{1}{\log_e a} \frac{1}{x} \\
 \end{eqnarray}
 <p>ということで公式を満たしてくれました。最後の式変形には底の変換公式を使っています。</p>
 \begin{eqnarray}
-    \displaystyle \log_a b = /frac{\log_c b}{\log_c a} 
+    \displaystyle \log_a b = \frac{\log_c b}{\log_c a} 
 \end{eqnarray}
-<p>の\(b=c\)の場合ですね。この変換公式は因数の羅列をイメージすれば納得しやすいと思います。\(a\)が\(\log_a b\)個あると\(b\)になり，\(c\)が\(\log_c a\)個あると\(a\)になりますから，\(c\)は\(_log_c a \cdot log_a b\)個あれば\(b\)になれますよね。</p>
+<p>の\(b=c\)の場合ですね。この変換公式は因数の羅列をイメージすれば納得しやすいと思います。\(a\)が\(\log_a b\)個あると\(b\)になり，\(c\)が\(\log_c a\)個あると\(a\)になりますから，\(c\)は\(\log_c a \cdot \log_a b\)個あれば\(b\)になれますよね。</p>
 \begin{eqnarray}
     \displaystyle \log_c a \cdot \log_a b =  = \log_c b \\
-	\log_a b = /frac{\log_c b}{\log_c a} 
+	\log_a b = \frac{\log_c b}{\log_c a} 
 \end{eqnarray}
 <p>難しくありませんね。</p>
 </section>
 
 <section>
+<h4>つかれた</h4>
 <p>かなり長くなってしまいましたが，いい復習になりました。</p>
 <p>こうしてみると本当に，既知の公式を利用できるって幸せなことですね。独力じゃ絶対に導出できません。</p>
 <p>微分公式を覚えておけば積分もできるようになりますよね。微分積分学の基本定理ってやつです。これについても追い追い言語化してみたいです。</p>
