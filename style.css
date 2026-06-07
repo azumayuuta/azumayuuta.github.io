@@ -468,6 +468,8 @@ a.ddmenu::before {
 .color-light {color: var(--light-color); font-weight: bold;}
 .color-accent {color: var(--accent-color); font-weight: bold;}
 
+/*MathJax用*/
+.eqn {display: block; overflow-x: auto;}
 
 /*メイン画像
 ---------------------------------------------------------------------------*/
