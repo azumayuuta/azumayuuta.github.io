@@ -107,7 +107,7 @@
 \begin{equation}
 	\mathbf{y}  = (y_1,y_2,y_3,...,y_n)
 \end{equation}
-<p>さてここで，突然ですが各ベクトルのノルムと二つの内積を見ていきましょう。</p>
+<p>ただし \(x_i\), \(y_i\) は\(x\), \(y\) の \(i\)番目にあたる値の偏差とします。さてここで，突然ですが各ベクトルのノルムと二つの内積を見ていきましょう。</p>
 \begin{eqnarray}
 	|| \mathbf{x} || &= sqrt{x_1^2+x_2^2+x_3^2+...+x_n^2} \\
 	|| \mathbf{y} || &= sqrt{y_1^2+y_2^2+y_3^2+...+y_n^2} \\
@@ -120,6 +120,16 @@
 	\sigma_y = sqrt{\feac{1}{n}} (y_1^2+y_2^2+...+y_n^2)} = \sqrt{\feac{1}{n}} \sqrt{y_1^2+y_2^2+...+y_n^2} = \sqrt{\feac{1}{n}} ||\mathbf{y}|| \\
 	Cov(x,y) = \frac{1}{n} (x_1 y_1 + x_2 y_2 + ... + x_n y_n) = \frac{1}{n} (\mathbf{x} \cdot \mathbf{y}) = \frac{1}{n} || \mathbf{x} || || \mathbf{x} || \cos{\theta}
 \end{eqnarray}
+<p>さて，あとはこれを相関係数の定義式に代入するだけです。</p>
+\begin{eqnarray}
+	\displaystyle \rho &= \frac{Cov(x,y)}{\sigma_x \sigma_y} \\
+	&= \frac{\frac{1}{n} || \mathbf{x} || || \mathbf{x} || \cos{\theta}}{\sqrt{\feac{1}{n}} ||\mathbf{x}|| \sqrt{\feac{1}{n}} ||\mathbf{y}||} \\
+	&= \cos{θ}
+\end{eqnarray}
+<p>ということで相関係数は実は偏差ベクトルどうしの角度 (のコサイン) なのでした。</p>
+<p>\(-1 \lt \cos{\theta} \lt 1 \) より相関係数は-1から1の値を取ることが分かります。(ベクトル間の角度が複素数になることってあるんでしょうか？わかりません。)</p>
+<p>何を今更と思う人もいるかもしれませんが，個人的には証明の美しさにうっとりしてしまいました。(心理統計Iとかで教えといてよ！)</p>
+<p>というわけで今日はここまで，また今度。</p>
 	
 </main>
 
