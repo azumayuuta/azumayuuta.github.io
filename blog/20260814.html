@@ -98,17 +98,22 @@
 
 <section>
 <p>対応のある二つの変数 \(x\), \(y\) の間の相関係数とは</p>
+	
 \begin{equation}
 	\displaystyle \rho = \frac{\mathrm{Cov}(x,y)}{\sigma_x \sigma_y}
 \end{equation}
+	
 <p>でした。ここで下のようなベクトルを導入します。</p>
+	
 \begin{equation}
 	\mathbf{x}  = (x_1,x_2,...,x_n)
 \end{equation}
 \begin{equation}
 	\mathbf{y}  = (y_1,y_2,...,y_n)
 \end{equation}
+	
 <p>ただし \(x_i\), \(y_i\) は\(x\), \(y\) の \(i\)番目にあたる値の偏差とします。さてここで，突然ですが各ベクトルのノルムと二つの内積を見ていきましょう。</p>
+
 \begin{equation}
 	\| \mathbf{x} \| = \sqrt{x_1^2+x_2^2+...+x_n^2} \\
 \end{equation}
@@ -118,9 +123,9 @@
 \begin{equation}
 	\mathbf{x} \cdot \mathbf{y} = \| \mathbf{x} \| \| \mathbf{y} \| \cos{\theta} = x_1 y_1 + x_2 y_2+ x_3 y_3 + ... + x_n y_n
 \end{equation}
-</section>
-<section>
+
 <p>勘の良い人は気づいたかもしれませんが (私は気づけませんでしたが...) 下のような関係を考えることができます。</p>
+	
 \begin{equation}
 	\displaystyle \sigma_x = \sqrt{\frac{1}{n} (x_1^2+x_2^2+...+x_n^2)} = \sqrt{\frac{1}{n}} \sqrt{x_1^2+x_2^2+...+x_n^2} = \sqrt{\frac{1}{n}} ||\mathbf{x}|| \\
 \end{equation}
@@ -130,18 +135,22 @@
 \begin{equation}
 	\mathrm{Cov}(x,y) = \frac{1}{n} (x_1 y_1 + x_2 y_2 + ... + x_n y_n) = \frac{1}{n} \mathbf{x} \cdot \mathbf{y} = \frac{1}{n} \| \mathbf{x} \| || \mathbf{y} || \cos{\theta}
 \end{equation}
+	
 <p>さて，あとはこれを相関係数の定義式に代入するだけです。</p>
+	
 \begin{eqnarray}
 	\displaystyle \rho &=& \frac{\mathrm{Cov}(x,y)}{\sigma_x \sigma_y} \\
 	&=& \frac{\frac{1}{n} \| \mathbf{x} \| \| \mathbf{x} \| \cos{\theta}}{\sqrt{\frac{1}{n}} \|\mathbf{x}\| \sqrt{\frac{1}{n}} \|\mathbf{y}\|} \\
 	&=& \frac{ \frac{1}{n} }{ (\sqrt{\frac{1}{n}})^2 } \frac{\| \mathbf{x} \| \| \mathbf{x} \|}{\|\mathbf{x}\| \|\mathbf{y}\|} \cos{\theta}\\
 	&=& \cos{θ}
 \end{eqnarray}
+	
 <p>ということで，相関係数は実は<span class="color-accent">偏差ベクトルどうしの角度</span> (のコサイン) なのでした。</p>
 <p>\(-1 \le \cos{\theta} \le 1 \) より \(-1 \le \rho \le 1 \) です。(\(\theta\) が複素数になることってあるんでしょうか？わかりません。)</p>
 </section>
 <section>	
 <p>何を今更と思う人もいるかもしれませんが，個人的には証明の美しさにうっとりしてしまいました。(心理統計Ⅰとかで教えといてよ！)</p>
+<p>僕が心理統計を教わった先生は「心理学者にとって統計は電子レンジだ」とおっしゃっていました。仕組みは知らなくてもいいから使い方 (卵はチンしちゃダメとか，ご飯をチンするならふんわりラップをかけて...とか) をちゃんと把握しときなさいという趣旨だったのですが，統計も電子レンジも仕組みを理解した方が上手く使いこなせますよね。</p>
 <p>というわけで今日はここまで，また今度。</p>
 </section>
 	
