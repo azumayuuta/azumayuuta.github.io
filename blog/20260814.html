@@ -98,7 +98,7 @@
 
 <p>対応のある二つの変数 \(x\), \(y\) の間の相関係数とは</p>
 \begin{equation}
-	\displaystyle \rho = \fraq{Cov(x,y)}{\sigma_x \sigma_y}
+	\displaystyle \rho = \frac{Cov(x,y)}{\sigma_x \sigma_y}
 \end{equation}
 <p>でした。ここで下のようなベクトルを導入します。</p>
 \begin{equation}
@@ -109,10 +109,18 @@
 \end{equation}
 <p>さてここで，突然ですが各ベクトルのノルムと二つの内積を見ていきましょう。</p>
 \begin{eqnarray}
-	|| \mathbf{x} || &= sqrt{x_1^2+x_2^2+x_3^2+...+x_n^2}
-	|| \mathbf{y} || &= sqrt{y_1^2+y_2^2+y_3^2+...+y_n^2}
+	|| \mathbf{x} || &= sqrt{x_1^2+x_2^2+x_3^2+...+x_n^2} \\
+	|| \mathbf{y} || &= sqrt{y_1^2+y_2^2+y_3^2+...+y_n^2} \\
 	\mathbf{x} \cdot \mathbf{y} = || \mathbf{x} || || \mathbf{x} || \cos{\theta} = x_1 y_1 + x_2 y_2+ x_3 y_3 + ... + x_n y_n
 \end{eqnarray}
+<p>勘の良い人は気づいたかもしれませんが (私は気づけませんでしたが...) 下のような関係を考えることができます。</p>
+\begin{eqnarray}
+	\displaystyle
+	\sigma_x = sqrt{\feac{1}{n}} (x_1^2+x_2^2+...+x_n^2)} = \sqrt{\feac{1}{n}} \sqrt{x_1^2+x_2^2+...+x_n^2} = \sqrt{\feac{1}{n}} ||\mathbf{x}|| \\
+	\sigma_y = sqrt{\feac{1}{n}} (y_1^2+y_2^2+...+y_n^2)} = \sqrt{\feac{1}{n}} \sqrt{y_1^2+y_2^2+...+y_n^2} = \sqrt{\feac{1}{n}} ||\mathbf{y}|| \\
+	Cov(x,y) = \frac{1}{n} (x_1 y_1 + x_2 y_2 + ... + x_n y_n) = \frac{1}{n} (\mathbf{x} \cdot \mathbf{y}) = \frac{1}{n} || \mathbf{x} || || \mathbf{x} || \cos{\theta}
+\end{eqnarray}
+	
 </main>
 
 </div>
