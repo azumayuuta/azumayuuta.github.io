@@ -96,6 +96,7 @@
 <p>ずっと疑問には思っていたのですが，初めて証明を見て感動したので備忘録に。</p>
 </section>
 
+<section>
 <p>対応のある二つの変数 \(x\), \(y\) の間の相関係数とは</p>
 \begin{equation}
 	\displaystyle \rho = \frac{Cov(x,y)}{\sigma_x \sigma_y}
@@ -115,21 +116,21 @@
 \end{eqnarray}
 <p>勘の良い人は気づいたかもしれませんが (私は気づけませんでしたが...) 下のような関係を考えることができます。</p>
 \begin{eqnarray}
-	\displaystyle
-	\sigma_x = sqrt{\feac{1}{n}} (x_1^2+x_2^2+...+x_n^2)} = \sqrt{\feac{1}{n}} \sqrt{x_1^2+x_2^2+...+x_n^2} = \sqrt{\feac{1}{n}} ||\mathbf{x}|| \\
-	\sigma_y = sqrt{\feac{1}{n}} (y_1^2+y_2^2+...+y_n^2)} = \sqrt{\feac{1}{n}} \sqrt{y_1^2+y_2^2+...+y_n^2} = \sqrt{\feac{1}{n}} ||\mathbf{y}|| \\
+	\displaystyle \sigma_x = sqrt{\feac{1}{n}} (x_1^2+x_2^2+...+x_n^2)} = \sqrt{\feac{1}{n}} \sqrt{x_1^2+x_2^2+...+x_n^2} = \sqrt{\frac{1}{n}} ||\mathbf{x}|| \\
+	\sigma_y = sqrt{\feac{1}{n}} (y_1^2+y_2^2+...+y_n^2)} = \sqrt{\feac{1}{n}} \sqrt{y_1^2+y_2^2+...+y_n^2} = \sqrt{\frac{1}{n}} ||\mathbf{y}|| \\
 	Cov(x,y) = \frac{1}{n} (x_1 y_1 + x_2 y_2 + ... + x_n y_n) = \frac{1}{n} (\mathbf{x} \cdot \mathbf{y}) = \frac{1}{n} || \mathbf{x} || || \mathbf{x} || \cos{\theta}
 \end{eqnarray}
 <p>さて，あとはこれを相関係数の定義式に代入するだけです。</p>
 \begin{eqnarray}
 	\displaystyle \rho &= \frac{Cov(x,y)}{\sigma_x \sigma_y} \\
-	&= \frac{\frac{1}{n} || \mathbf{x} || || \mathbf{x} || \cos{\theta}}{\sqrt{\feac{1}{n}} ||\mathbf{x}|| \sqrt{\feac{1}{n}} ||\mathbf{y}||} \\
+	&= \frac{\frac{1}{n} || \mathbf{x} || || \mathbf{x} || \cos{\theta}}{\sqrt{\frac{1}{n}} ||\mathbf{x}|| \sqrt{\frac{1}{n}} ||\mathbf{y}||} \\
 	&= \cos{θ}
 \end{eqnarray}
 <p>ということで相関係数は実は偏差ベクトルどうしの角度 (のコサイン) なのでした。</p>
 <p>\(-1 \lt \cos{\theta} \lt 1 \) より相関係数は-1から1の値を取ることが分かります。(ベクトル間の角度が複素数になることってあるんでしょうか？わかりません。)</p>
 <p>何を今更と思う人もいるかもしれませんが，個人的には証明の美しさにうっとりしてしまいました。(心理統計Iとかで教えといてよ！)</p>
 <p>というわけで今日はここまで，また今度。</p>
+</section>
 	
 </main>
 
