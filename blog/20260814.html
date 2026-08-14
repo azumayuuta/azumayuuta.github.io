@@ -109,17 +109,25 @@
 	\mathbf{y}  = (y_1,y_2,y_3,...,y_n)
 \end{equation}
 <p>ただし \(x_i\), \(y_i\) は\(x\), \(y\) の \(i\)番目にあたる値の偏差とします。さてここで，突然ですが各ベクトルのノルムと二つの内積を見ていきましょう。</p>
-\begin{eqnarray}
+\begin{equation}
 	\| \mathbf{x} \| &=& \sqrt{x_1^2+x_2^2+x_3^2+...+x_n^2} \\
+\end{equation}
+\begin{equation}
 	\| \mathbf{y} \| &=& \sqrt{y_1^2+y_2^2+y_3^2+...+y_n^2} \\
+\end{equation}
+\begin{equation}
 	\mathbf{x} \cdot \mathbf{y} &=& \| \mathbf{x} \| \| \mathbf{y} \| \cos{\theta} = x_1 y_1 + x_2 y_2+ x_3 y_3 + ... + x_n y_n
-\end{eqnarray}
+\end{equation}
 <p>勘の良い人は気づいたかもしれませんが (私は気づけませんでしたが...) 下のような関係を考えることができます。</p>
-\begin{eqnarray}
+\begin{equation}
 	\displaystyle \sigma_x &=& \sqrt{\frac{1}{n} (x_1^2+x_2^2+...+x_n^2)} = \sqrt{\frac{1}{n}} \sqrt{x_1^2+x_2^2+...+x_n^2} = \sqrt{\frac{1}{n}} ||\mathbf{x}|| \\
+\end{equation}
+\begin{equation}
 	\sigma_y &=& \sqrt{\frac{1}{n} (y_1^2+y_2^2+...+y_n^2)} = \sqrt{\frac{1}{n}} \sqrt{y_1^2+y_2^2+...+y_n^2} = \sqrt{\frac{1}{n}} \|\mathbf{y} \| \\
+\end{equation}
+\begin{equation}
 	\mathrm{Cov}(x,y) &=& \frac{1}{n} (x_1 y_1 + x_2 y_2 + ... + x_n y_n) = \frac{1}{n} \mathbf{x} \cdot \mathbf{y} = \frac{1}{n} \| \mathbf{x} \| || \mathbf{x} || \cos{\theta}
-\end{eqnarray}
+\end{equation}
 <p>さて，あとはこれを相関係数の定義式に代入するだけです。</p>
 \begin{eqnarray}
 	\displaystyle \rho &=& \frac{\mathrm{Cov}(x,y)}{\sigma_x \sigma_y} \\
