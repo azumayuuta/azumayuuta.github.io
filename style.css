@@ -470,7 +470,7 @@ a.ddmenu::before {
 
 /*MathJax用*/
 .eqn {display: block; overflow-x: auto;}
-.math {font-family: "Latin Modern Roman", "Computer Modern", "Times New Roman", serif; margin-left: 4em;}
+.math {font-family: "Latin Modern Roman", "Computer Modern", "Times New Roman", serif; padding: 4em;}
 
 /*メイン画像
 ---------------------------------------------------------------------------*/
