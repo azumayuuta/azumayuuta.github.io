@@ -121,7 +121,7 @@
 	\| \mathbf{y} \| = \sqrt{y_1^2+y_2^2+...+y_n^2} \\
 \end{equation}
 \begin{equation}
-	\mathbf{x} \cdot \mathbf{y} = \| \mathbf{x} \| \| \mathbf{y} \| \cos{\theta} = x_1 y_1 + x_2 y_2+ x_3 y_3 + ... + x_n y_n
+	\mathbf{x} \cdot \mathbf{y} = \| \mathbf{x} \| \| \mathbf{y} \| \cos{\theta} = x_1 y_1 + x_2 y_2 + ... + x_n y_n
 \end{equation}
 
 <p>勘の良い人は気づいたかもしれませんが (私は気づけませんでしたが...) 下のような関係を考えることができます。</p>
@@ -140,19 +140,19 @@
 	
 \begin{eqnarray}
 	\displaystyle \rho &=& \frac{\mathrm{Cov}(x,y)}{\sigma_x \sigma_y} \\
-	&=& \frac{\frac{1}{n} \| \mathbf{x} \| \| \mathbf{x} \| \cos{\theta}}{\sqrt{\frac{1}{n}} \|\mathbf{x}\| \sqrt{\frac{1}{n}} \|\mathbf{y}\|} \\
-	&=& \frac{ \frac{1}{n} }{ (\sqrt{\frac{1}{n}})^2 } \frac{\| \mathbf{x} \| \| \mathbf{x} \|}{\|\mathbf{x}\| \|\mathbf{y}\|} \cos{\theta}\\
+	&=& \frac{\frac{1}{n} \| \mathbf{x} \| \| \mathbf{y} \| \cos{\theta}}{\sqrt{\frac{1}{n}} \|\mathbf{x}\| \sqrt{\frac{1}{n}} \|\mathbf{y}\|} \\
+	&=& \frac{ \frac{1}{n} }{ (\sqrt{\frac{1}{n}})^2 } \frac{\| \mathbf{x} \| \| \mathbf{y} \|}{\|\mathbf{x}\| \|\mathbf{y}\|} \cos{\theta}\\
 	&=& \cos{θ}
 \end{eqnarray}
 	
 <p>ということで，相関係数は実は<span class="color-accent">偏差ベクトルどうしの角度</span> (のコサイン) なのでした。</p>
-<p>\(-1 \le \cos{\theta} \le 1 \) より \(-1 \le \rho \le 1 \) です。(\(\theta\) が複素数になることってあるんでしょうか？わかりません。)</p>
+<p>\(-1 \le \cos{\theta} \le 1 \) より \(-1 \le \rho \le 1 \) です。(\(\theta\) が複素数になることってあるんでしょうか？わかりません。)</p>	
+<p>何を今更と思う人もいるかもしれませんが，個人的には証明の美しさにうっとりしてしまいました。(心理統計Ⅰとかで教えといてよ！)</p>
 </section>
 	
-<section>	
-<p>何を今更と思う人もいるかもしれませんが，個人的には証明の美しさにうっとりしてしまいました。(心理統計Ⅰとかで教えといてよ！)</p>
+<section>
 <p>僕が心理統計を教わった先生は「心理学者にとって統計は電子レンジだ」とおっしゃっていました。</p>
-<p>仕組みは知らなくてもいいから使い方 (卵はチンしちゃダメとか，ご飯をチンするならふんわりラップをかけて...とか) をちゃんと把握しときなさいという趣旨だったのですが，統計も電子レンジも仕組みを理解した方が上手く使いこなせますよね。</p>
+<p>仕組みは知らなくてもいいから，使い方 (卵はチンしちゃダメとか，ご飯をチンするならふんわりラップをかけて...とか) をちゃんと把握しときなさいという趣旨だったのですが，統計も電子レンジも仕組みを理解した方が上手く使いこなせますよね。</p>
 <p>というわけで今日はここまで，また今度。</p>
 </section>
 	
