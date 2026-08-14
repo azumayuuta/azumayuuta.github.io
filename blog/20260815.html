@@ -113,7 +113,7 @@
 <p>しかしながら，この位相空間とかいうやつがなかなかすごいのです。上述のように連続性とか定義できちゃいます。</p>
 <p>さ，ごちゃごちゃ言ってても仕方ないので定義を見ていきましょう。</p>
 <P> </P>
-<p><span class="math">集合Xが位相空間であるとは，Xのある部分集合族 \( \mathcal{O} \) が存在して以下の条件を満たすことである</span></p>
+<p><span class="math">集合\(X\)が位相空間であるとは，\(X\)のある部分集合族 \( \mathcal{O} \) が存在して以下の条件を満たすことである</span></p>
 
 \begin{eqnarray}
 	\displaystyle &1&. \ \varnothing ,X \in \mathcal{O} \\
@@ -121,7 +121,7 @@
 	&3&. \ \forall \{ O_{\lambda} \}_{\lambda \in \Lambda} : \bigcap_{\lambda \in \Lambda} O_{\lambda} \in \mathcal{O} \\
 \end{eqnarray}
 
-<p><span class="math">このとき，\(\mathcal{O}\) を「Xの位相」とよび，\( O_{\lambda} \in \mathcal{O} \) を「Xの開集合」と呼ぶ</span></p>
+<p><span class="math">このとき，\(\mathcal{O}\) を「\(X\)の位相」とよび，\( O_{\lambda} \in \mathcal{O} \) を「\(X\)の開集合」と呼ぶ</span></p>
 <p> </p>
 <p>なにがなんだか分かりませんね。要するに何を言っているかというと「ある集合に<b>開集合</b>を定義したものを位相空間と呼ぶ」ということです。</p>
 <p>開集合っていうのは端を含まない集合ですね。\(A=\{\forall a \ | \ 0 \lt a \lt 1\}\) とかです。</p>
@@ -139,6 +139,12 @@
 <p>さて，なんでこんなものを考えるのでしょうか？それはこの位相空間こそ<span class="color-accent">連続性</span>を定義できるもっとも広い空間だからです。</p>
 
 <h4>2. 写像の連続性</h4>
+<p>写像 (関数) が連続であるとは，値に飛びがないことです。これを曖昧さのないように定義すると以下のようになります。</p>
+
+<p><span class="math">ある点 \(a\) から距離 \(\epsilon\) の範囲に存在するすべての元を含む集合を \(\a) の \(\epsilon\) 近傍と呼び，\(N_{\epsilon}(a)\)と表す</span></p>
+<p><span class="math">写像 \(F : X \rightarrow F(X)\) が連続であるとは，任意の \(f(x) \in F(X)\) の任意の\(\epsilon\)近傍 \(N_{\epsilon}(f(x))\) に対して，ある \(x \in F(X)\) の\(\delta\)近傍 \(N_{\delta}(x)\) が存在して \(F(N_{\delta}(x)) \subset N_{\epsilon}(f(x))\)となることを言う</span></p>
+
+<p>ε-δ論法ってやつですね。上の定義の他に点列で定義する方法もありますが，自分にはこちらの方が分かりやすかったです。</p>
 	
 </section>
 
