@@ -103,21 +103,23 @@
 \end{equation}
 <p>でした。ここで下のようなベクトルを導入します。</p>
 \begin{equation}
-	\mathbf{x}  = (x_1,x_2,x_3,...,x_n)
+	\mathbf{x}  = (x_1,x_2,...,x_n)
 \end{equation}
 \begin{equation}
-	\mathbf{y}  = (y_1,y_2,y_3,...,y_n)
+	\mathbf{y}  = (y_1,y_2,...,y_n)
 \end{equation}
 <p>ただし \(x_i\), \(y_i\) は\(x\), \(y\) の \(i\)番目にあたる値の偏差とします。さてここで，突然ですが各ベクトルのノルムと二つの内積を見ていきましょう。</p>
 \begin{equation}
-	\| \mathbf{x} \| = \sqrt{x_1^2+x_2^2+x_3^2+...+x_n^2} \\
+	\| \mathbf{x} \| = \sqrt{x_1^2+x_2^2+...+x_n^2} \\
 \end{equation}
 \begin{equation}
-	\| \mathbf{y} \| = \sqrt{y_1^2+y_2^2+y_3^2+...+y_n^2} \\
+	\| \mathbf{y} \| = \sqrt{y_1^2+y_2^2+...+y_n^2} \\
 \end{equation}
 \begin{equation}
 	\mathbf{x} \cdot \mathbf{y} = \| \mathbf{x} \| \| \mathbf{y} \| \cos{\theta} = x_1 y_1 + x_2 y_2+ x_3 y_3 + ... + x_n y_n
 \end{equation}
+</section>
+<section>
 <p>勘の良い人は気づいたかもしれませんが (私は気づけませんでしたが...) 下のような関係を考えることができます。</p>
 \begin{equation}
 	\displaystyle \sigma_x = \sqrt{\frac{1}{n} (x_1^2+x_2^2+...+x_n^2)} = \sqrt{\frac{1}{n}} \sqrt{x_1^2+x_2^2+...+x_n^2} = \sqrt{\frac{1}{n}} ||\mathbf{x}|| \\
