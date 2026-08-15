@@ -432,6 +432,29 @@ a.ddmenu::before {
 	margin-right: calc(-1 * var(--content-space-l));
 }
 
+/*コラムボックス
+---------------------------------------------------------------------------*/
+.column{
+  margin: 1em 0;
+  padding: 1em;
+  position: relative;
+  border: 1px solid var(--promary-color);
+}
+
+.column-title{
+  position: absolute;
+  top: -0.8em;
+  left: 2em;
+  font-weight: bold;
+  font-size: 1.2em;
+  background: #fff;
+  padding: 0 0.5em;
+}
+
+.column p{
+  margin: 0;
+  padding: 0;
+}
 
 /*その他
 ---------------------------------------------------------------------------*/
@@ -470,7 +493,7 @@ a.ddmenu::before {
 
 /*MathJax用*/
 .eqn {display: block; overflow-x: auto;}
-.math {display: block; font-family: "Latin Modern Roman", "Computer Modern", "Times New Roman", serif; margin-left: 4em;}
+.math {display: block; font-family: "Latin Modern Roman", "Computer Modern", "Times New Roman", serif; margin-left: 4em; margin-right: 4em;}
 
 /*メイン画像
 ---------------------------------------------------------------------------*/
