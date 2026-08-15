@@ -435,7 +435,7 @@ a.ddmenu::before {
 /*コラムボックス
 ---------------------------------------------------------------------------*/
 .column{
-  margin: 1em 1em;
+  margin: 1.5em;
   padding: 1em;
   position: relative;
   border: 1px solid var(--bg-inverse-color);
@@ -443,7 +443,7 @@ a.ddmenu::before {
 
 .column-title{
   position: absolute;
-  top: -0.5em;
+  top: 0em;
   left: 1em;
   font-weight: bold;
   font-size: 1.2em;
