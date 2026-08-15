@@ -443,11 +443,11 @@ a.ddmenu::before {
 
 .column-title{
   position: absolute;
-  top: -1.2em;
+  top: -1em;
   left: 1em;
   font-weight: bold;
   font-size: 1.2em;
-  background: #fff;
+  background: var(--bg-color);
   padding: 0 0.5em;
 }
 
