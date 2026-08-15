@@ -435,7 +435,7 @@ a.ddmenu::before {
 /*コラムボックス
 ---------------------------------------------------------------------------*/
 .column{
-  margin: 1.5em;
+  margin: 1.2em;
   padding: 1em;
   position: relative;
   border: 1px solid var(--bg-inverse-color);
