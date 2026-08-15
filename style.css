@@ -443,7 +443,7 @@ a.ddmenu::before {
 
 .column-title{
   position: absolute;
-  top: -0.9em;
+  top: -1em;
   left: 1em;
   font-weight: bold;
   font-size: 1.2em;
