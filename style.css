@@ -438,7 +438,7 @@ a.ddmenu::before {
   margin: 1.5em;
   padding: 1em;
   position: relative;
-  border: 1px solid var(--bg-inverse-color);
+  border: 1px solid var(--bg-border-color);
 }
 
 .column-title{
