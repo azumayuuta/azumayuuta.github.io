@@ -435,15 +435,15 @@ a.ddmenu::before {
 /*コラムボックス
 ---------------------------------------------------------------------------*/
 .column{
-  margin: 1em 0;
+  margin: 1em 1em;
   padding: 1em;
   position: relative;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--bg-reverse-color);
 }
 
 .column-title{
   position: absolute;
-  top: -0.8em;
+  top: -1em;
   left: 2em;
   font-weight: bold;
   font-size: 1.2em;
