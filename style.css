@@ -438,13 +438,13 @@ a.ddmenu::before {
   margin: 1em 1em;
   padding: 1em;
   position: relative;
-  border: 1px solid var(--bg-reverse-color);
+  border: 1px solid var(--bg-inverse-color);
 }
 
 .column-title{
   position: absolute;
-  top: -1em;
-  left: 2em;
+  top: -0.5em;
+  left: 1em;
   font-weight: bold;
   font-size: 1.2em;
   background: #fff;
