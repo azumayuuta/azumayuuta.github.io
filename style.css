@@ -451,11 +451,6 @@ a.ddmenu::before {
   padding: 0 0.5em;
 }
 
-.column p{
-  margin: 0;
-  padding: 0;
-}
-
 /*その他
 ---------------------------------------------------------------------------*/
 .color-check, .color-check a {color: #ff0000 !important;}
