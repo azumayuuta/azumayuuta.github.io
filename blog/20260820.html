@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>位相空間ってなに？ Part 2 | AzumaYuta Kobe.U</title>
+<title>正方行列の対角化と固有ベクトル | AzumaYuta Kobe.U</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="神戸大学 人間発達環境学研究科 東 優汰 のホームページです">
 <link rel="stylesheet" href="../style.css">
@@ -86,15 +86,16 @@
 -->
 
 <section>
-<h2>位相空間ってなに？ Part 2</h2>
+<h2>正方行列の対角化と固有ベクトル</h2>
 </section>
 <section>
-<p><a href="20260815.html">前回</a>の続きです。今日は位相空間における連続性の定義が，「ふつうの」連続性の定義と同値であることを見ていきましょう。</p>
+<p>備忘録です。</p>
 	
 </section>
 <section>
-<h4>1. 位相空間における写像の連続性</h4>
-<p>前回も軽く触れましたが，おさらいしておきましょう。位相空間 \((X,\mathcal{O}_X)\) と \((F(X),\mathcal{O}_{F(X)})\) があって，写像 \(F:X \rightarrow F(X)\) が連続写像であるとは以下の要請を満たすことでした。</p>
+<h4>1. 固有値と固有ベクトル</h4>
+<p>行列，特に正方行列は「ベクトル変換マシーン」として捉えることができます。ある縦ベクトルに左から行列を掛けると，なんかいい感じに写された別の縦ベクトルが出てきます。<span class="color-accent">線形変換</span>というやつです。</p>
+<p>行列による線形変換は基底の取り換えと見ることもできます。</p>
 
 \begin{eqnarray}
 	\displaystyle \forall V \in \mathcal{O}_{F(X)} : \ \ F^{-1}(V) \in \mathcal{O}_X \\
