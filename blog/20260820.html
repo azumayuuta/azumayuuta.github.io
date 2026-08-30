@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>正方行列の対角化と固有ベクトル | AzumaYuta Kobe.U</title>
+<title>線形変換，固有値・固有ベクトル，対角化 | AzumaYuta Kobe.U</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="神戸大学 人間発達環境学研究科 東 優汰 のホームページです">
 <link rel="stylesheet" href="../style.css">
@@ -86,16 +86,16 @@
 -->
 
 <section>
-<h2>正方行列の対角化と固有ベクトル</h2>
+<h2>線形変換，固有値・固有ベクトル，対角化</h2>
 </section>
 <section>
 <p>備忘録です。</p>
 	
 </section>
 <section>
-<h4>1. 固有値と固有ベクトル</h4>
+<h4>1. 線形変換</h4>
 <p>行列，特に正方行列は「ベクトル変換マシーン」として捉えることができます。ある縦ベクトルに左から行列を掛けると，なんかいい感じに写された別の縦ベクトルが出てきます。<span class="color-accent">線形変換</span>というやつです。</p>
-<p>行列による線形変換は基底の取り換えと見ることもできます。</p>
+<p>行列による線形変換は基底の取り換えと見ることができます。2×2正方行列を使って例を見ていきましょう。</p>
 
 \begin{eqnarray}
 	\displaystyle \forall V \in \mathcal{O}_{F(X)} : \ \ F^{-1}(V) \in \mathcal{O}_X \\
