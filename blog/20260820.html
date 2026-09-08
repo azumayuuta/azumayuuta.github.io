@@ -98,25 +98,25 @@
 <p>行列による線形変換は基底の取り換えと見ることができます。基底というのは任意のベクトルを以下のような形で指定できるときの \(\mathbb{e}_1 , mathbb{e}_2 , \ldots , mathbb{e}_n \) のことでした。</p>
 
 \begin{eqnarray}
-	\displaystyle \mathbb{v} = \sum_{i=1}^n a_i \mathbb{e}_i
+	\displaystyle \boldsymbol{v} = \sum_{i=1}^n a_i \boldsymbol{e}_i
 \end{eqnarray}
 
 <p>いま，\(n \times n\)正方行列による線形変換を考えてみます。</p>
 
 \begin{eqnarray}
-	\displaystyle \mathbf{A} \mathbb{v} &=& \mathbf{A} \sum_{i=1}^n a_i \mathbb{e}_i \\
-	&=& a_1 \mathbf{A} \mathbb{e}_1 + a_2 \mathbf{A} \mathbb{e}_2 + \ldots + a_n \mathbf{A} \mathbb{e}_n
+	\displaystyle \boldsymbol{A} \boldsymbol{v} &=& \boldsymbol{A} \sum_{i=1}^n a_i \boldsymbol{e}_i \\
+	&=& a_1 \boldsymbol{A} \boldsymbol{e}_1 + a_2 \boldsymbol{A} \boldsymbol{e}_2 + \ldots + a_n \boldsymbol{A} \boldsymbol{e}_n
 \end{eqnarray}
 
 <p>簡単に，\(2 \times 2\)正方行列で考えてみると</p>
 
 \begin{eqnarray}
-	\displaystyle \begin{pmatrix} c_1 & c_2 \cdots \\ c_3 & c_4 \end{pmatrix} \begin{pmatrix} a_1 e_11 + a2 e_21 \\ a_1 e_12 + a2 e_22 \end{pmatrix}
-	&=& \begin{pmatrix} c_1(a_1 e_11 + a2 e_21) + c_2(a_1 e_12 + a2 e_22) \\ c_3(a_1 e_11 + a2 e_21) + c_4(a_1 e_12 + a2 e_22) \end{pmatrix}
-    &=& a_1 \begin{pmatrix} c_1 e_11 + c_2 e_12 \\ c_3 e_11 + c_4 e_12 \end{pmatrix} + a_2 \begin{pmatrix} c_1 e_21 + c_2 e_22 \\ c_3 e_21 + c_4 e_22 \end{pmatrix}
+	\displaystyle \begin{pmatrix} c_1 & c_2 \\ c_3 & c_4 \end{pmatrix} \begin{pmatrix} a_1 e_11 + a2 e_21 \\ a_1 e_12 + a2 e_22 \end{pmatrix}
+	&=& \begin{pmatrix} c_1(a_1 e_{11} + a2 e_{21}) + c_2(a_1 e_{12} + a2 e_{22}) \\ c_3(a_1 e_{11} + a2 e_{21}) + c_4(a_1 e_{12} + a2 e_{22}) \end{pmatrix}
+    &=& a_1 \begin{pmatrix} c_1 e_{11} + c_2 e_{12} \\ c_3 e_{11} + c_4 e_{12} \end{pmatrix} + a_2 \begin{pmatrix} c_1 e_{21} + c_2 e_{22} \\ c_3 e_{21} + c_4 e_{22} \end{pmatrix}
 \end{eqnarray}
 
-<p>\(\mathbf(A) \mathbb{e}_1 = \mathbb{E}_1)，\(\mathbf(A) \mathbb{e}_2 = \mathbb{E}_2) と置くと</p>
+<p>\(\boldsymbol(A) \boldsymbol{e}_1 = \boldsymbol{E}_1\)，\(\boldsymbol(A) \boldsymbol{e}_2 = \boldsymbol{E}_2\) と置くと</p>
 
 \begin{equation}
     = a_1 \mathbb{E}_1 + a2 \mathbb{E}_2
