@@ -95,11 +95,35 @@
 <section>
 <h4>1. 線形変換</h4>
 <p>行列，特に正方行列は「ベクトル変換マシーン」として捉えることができます。ある縦ベクトルに左から行列を掛けると，なんかいい感じに写された別の縦ベクトルが出てきます。<span class="color-accent">線形変換</span>というやつです。</p>
-<p>行列による線形変換は基底の取り換えと見ることができます。2×2正方行列を使って例を見ていきましょう。</p>
+<p>行列による線形変換は基底の取り換えと見ることができます。基底というのは任意のベクトルを以下のような形で指定できるときの \(\mathbb{e}_1 , mathbb{e}_2 , \ldots , mathbb{e}_n \) のことでした。</p>
 
 \begin{eqnarray}
-	\displaystyle \forall V \in \mathcal{O}_{F(X)} : \ \ F^{-1}(V) \in \mathcal{O}_X \\
+	\displaystyle \mathbb{v} = \sum_{i=1}^n a_i \mathbb{e}_i
 \end{eqnarray}
+
+<p>いま，\(n \times n\)正方行列による線形変換を考えてみます。</p>
+
+\begin{eqnarray}
+	\displaystyle \mathbf{A} \mathbb{v} &=& \mathbf{A} \sum_{i=1}^n a_i \mathbb{e}_i \\
+	&=& a_1 \mathbf{A} \mathbb{e}_1 + a_2 \mathbf{A} \mathbb{e}_2 + \ldots + a_n \mathbf{A} \mathbb{e}_n
+\end{eqnarray}
+
+<p>簡単に，\(2 \times 2\)正方行列で考えてみると</p>
+
+\begin{eqnarray}
+	\displaystyle \begin{pmatrix} c_1 & c_2 \cdots \\ c_3 & c_4 \end{pmatrix} \begin{pmatrix} a_1 e_11 + a2 e_21 \\ a_1 e_12 + a2 e_22 \end{pmatrix}
+	&=& \begin{pmatrix} c_1(a_1 e_11 + a2 e_21) + c_2(a_1 e_12 + a2 e_22) \\ c_3(a_1 e_11 + a2 e_21) + c_4(a_1 e_12 + a2 e_22) \end{pmatrix}
+    &=& a_1 \begin{pmatrix} c_1 e_11 + c_2 e_12 \\ c_3 e_11 + c_4 e_12 \end{pmatrix} + a_2 \begin{pmatrix} c_1 e_21 + c_2 e_22 \\ c_3 e_21 + c_4 e_22 \end{pmatrix}
+\end{eqnarray}
+
+<p>\(\mathbf(A) \mathbb{e}_1 = \mathbb{E}_1)，\(\mathbf(A) \mathbb{e}_2 = \mathbb{E}_2) と置くと</p>
+
+\begin{equation}
+    = a_1 \mathbb{E}_1 + a2 \mathbb{E}_2
+\end{equation}
+
+<p>綺麗に基底だけが取り換えられていますね。</p>
+
 	
 </section>
 
