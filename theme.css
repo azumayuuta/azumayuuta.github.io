@@ -22,7 +22,7 @@
 	--bg-inverse-color: #333;			/*上のカラーの「対」として使う色*/
 	--bg-inverse-border-color: rgba(255,255,255,0.5);	/*枠線の色。255,255,255,0.5は白の事で0.5は色が50%出た状態。*/
 	
-	--primary-color: #30d4b2;						/*メインカラー*/
+	--primary-color: #0e9986;						/*メインカラー*/
 	--primary-inverse-color: #fff;		/*上のカラーの「対」として使う色*/
 	--primary-border-color: rgba(255,255,255,0.5);	/*枠線の色。255,255,255は白の事で0.5は色が50%出た状態。*/
 	
