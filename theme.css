@@ -22,15 +22,15 @@
 	--bg-inverse-color: #333;			/*上のカラーの「対」として使う色*/
 	--bg-inverse-border-color: rgba(255,255,255,0.5);	/*枠線の色。255,255,255,0.5は白の事で0.5は色が50%出た状態。*/
 	
-	--primary-color: #0180b7;						/*メインカラー*/
+	--primary-color: #30d4b2;						/*メインカラー*/
 	--primary-inverse-color: #fff;		/*上のカラーの「対」として使う色*/
 	--primary-border-color: rgba(255,255,255,0.5);	/*枠線の色。255,255,255は白の事で0.5は色が50%出た状態。*/
 	
-	--light-color: #f0e7d5;								/*薄いカラー*/
+	--light-color: #7ef3d6;								/*薄いカラー*/
 	--light-inverse-color: #333;		/*上のカラーの「対」として使う色*/
 	--light-border-color: rgba(0,0,0,0.2);	/*枠線の色。0,0,0は黒の事で0.2は色が20%出た状態。*/
 
-	--accent-color: #ff3256;						/*アクセントカラー*/
+	--accent-color: #fa1472;						/*アクセントカラー*/
 	--accent-inverse-color: #fff;		/*上のカラーの「対」として使う色*/
 	--accent-border-color: rgba(255,255,255,0.5);	/*枠線の色。255,255,255は白の事で0.5は色が50%出た状態。*/
 
