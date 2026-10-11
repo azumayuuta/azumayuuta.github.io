@@ -12,6 +12,12 @@
 ---------------------------------------------------------------------------*/
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
 
+/*IAH フォントの読み込み
+---------------------------------------------------------------------------*/
+@font-face {
+	font-family: 'IAH';
+	src: url('fonts/IAH.ttf') format('truetype');
+};
 
 /*CSSカスタムプロパティ（サイト全体を一括管理する為の設定）
 ---------------------------------------------------------------------------*/
@@ -39,6 +45,7 @@
 
 	--base-font: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo, "メイリオ", "Osaka", "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;  /*フォント指定*/
 	--accent-font: "Jost";  /*アクセント用英語フォント指定*/
+	--glitch-font: "IAH";
 
 }
 
