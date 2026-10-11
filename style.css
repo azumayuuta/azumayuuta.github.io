@@ -485,6 +485,7 @@ a.ddmenu::before {
 .color-primary {color: var(--primary-color); font-weight: bold;}
 .color-light {color: var(--light-color); font-weight: bold;}
 .color-accent {color: var(--accent-color); font-weight: bold;}
+.glitch {font-family: var(--glitch-font);}
 
 /*MathJax用*/
 .eqn {display: block; overflow-x: auto;}
