@@ -44,8 +44,8 @@
 	--content-space-l: 5vw;  /*余白の一括管理用。画面幅100% = 100vwです。*/
 	--content-space-s: 2rem;  /*余白の一括管理用。2文字分。*/
 
-	--base-font: "IAH", "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo, "メイリオ", "Osaka", "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;  /*フォント指定*/
-	--accent-font: "IAH";  /*アクセント用英語フォント指定*/
+	--base-font: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo, "メイリオ", "Osaka", "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;  /*フォント指定*/
+	--accent-font: "Jost";  /*アクセント用英語フォント指定*/
 	--glitch-font: "IAH";
 
 }
