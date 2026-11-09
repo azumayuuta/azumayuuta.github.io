@@ -163,9 +163,9 @@ header {
 }
 
 
-/*上部メニューとプルダウンメニューだけIAHフォントにする（本文はbase-fontのまま）
+/*上部メニューとプルダウンメニュー、サイトタイトル、トップページの各ページへのリンク見出しだけIAHフォントにする（本文はbase-fontのまま）
 ---------------------------------------------------------------------------*/
-#menubar {font-family: "IAH", "Noto Sans JP", sans-serif;}
+#menubar, #logo, .bg-wave1-animation-parts .text-parts h2 {font-family: "IAH", "Noto Sans JP", sans-serif;}
 
 
 /*大きな端末で見たメニュー
